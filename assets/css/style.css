@@ -14,26 +14,30 @@ header {
     text-transform: uppercase;
     color: white;
     text-align: center;
-    font-size: 400%
+    font-size: 400%;
+    font-family: Unbounded, 'san-serif';
 }
 
 .quiz-area {
     background-image: url("../images/blue-abstract.jpg");
     height: 600px;
-    width: 1000px;
+    width: 80%;
     border: solid 10px black;
     margin: auto;
     margin-top: 75px;
     border-radius: 10%;
     display: grid;
+    align-items: center;
+
     
 }
 
 .question-box {
     background-color: white;
     height: 250px;
-    width: 800px;
+    width: 80%;
     border: solid 2px black;
+    display: block;
     margin: auto;
     margin-top: 20px;
     border-radius: 15%;
@@ -41,7 +45,7 @@ header {
 
 .button-box {
     height: 300px;
-    width: 800px;
+    width: 80%;
     margin: auto;
     display: inline-grid;
     grid-template-columns: auto auto;
@@ -56,3 +60,30 @@ button {
     border: solid 2px black;
     border-radius: 10px;
 }
+
+
+@media only screen and (max-width: 1000px) {
+    .heading {
+        font-size: 300%;
+    }
+
+    .quiz-area {
+        border: solid 5px black;
+    }
+
+    .question-box {
+     
+        width: 70%;
+     
+    }
+
+    button {
+        height: 120px;
+        width: 200px;
+        margin: 10px;
+        border: solid 2px black;
+        border-radius: 10px;
+    }
+
+    }
+  
