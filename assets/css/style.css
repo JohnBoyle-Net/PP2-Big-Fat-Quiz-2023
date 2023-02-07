@@ -21,12 +21,13 @@ header {
 .quiz-area {
     background-image: url("../images/blue-abstract.jpg");
     height: 600px;
-    width: 80%;
+    width: 60%;
     border: solid 10px black;
     margin: auto;
     margin-top: 75px;
     border-radius: 10%;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 
     
@@ -34,10 +35,10 @@ header {
 
 .question-box {
     background-color: white;
-    height: 250px;
+    height: 180px;
     width: 80%;
     border: solid 2px black;
-    display: block;
+    display: flex;
     margin: auto;
     margin-top: 20px;
     border-radius: 15%;
@@ -45,7 +46,7 @@ header {
 
 .button-box {
     height: 300px;
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: inline-grid;
     grid-template-columns: auto auto;
@@ -61,14 +62,24 @@ button {
     border-radius: 10px;
 }
 
+.score {
+    background-color: white;
+    height: 50px;
+    width: 200px;
+    margin: 10px;
+    border: solid 2px black;
+    border-radius: 10px;
+}
 
-@media only screen and (max-width: 1000px) {
+
+@media only screen and (max-width: 1300px) {
     .heading {
         font-size: 300%;
     }
 
     .quiz-area {
         border: solid 5px black;
+        width: 70%;
     }
 
     .question-box {
@@ -79,11 +90,64 @@ button {
 
     button {
         height: 120px;
-        width: 200px;
+        width: 300px;
         margin: 10px;
         border: solid 2px black;
         border-radius: 10px;
     }
 
     }
+
+    @media only screen and (max-width: 950px) {
+        .heading {
+            font-size: 160%;
+        }
+    
+        .quiz-area {
+            border: solid 5px black;
+            margin-top: 10px;
+            width: 80%;
+        }
+    
+        .question-box {
+         
+            width: 80%;
+         
+        }
+    
+        button {
+            height: 120px;
+            width: 200px;
+            margin: 10px;
+            border: solid 2px black;
+            border-radius: 10px;
+        }
+    
+        }
   
+        @media only screen and (max-width: 650px) {
+            .heading {
+                font-size: 160%;
+            }
+        
+            .quiz-area {
+                border: solid 5px black;
+                margin-top: 10px;
+                width: 90%;
+            }
+        
+            .question-box {
+             
+                width: 80%;
+             
+            }
+        
+            button {
+                height: 120px;
+                width: 150px;
+                margin: 10px;
+                border: solid 2px black;
+                border-radius: 10px;
+            }
+        
+            }
