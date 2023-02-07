@@ -66,7 +66,7 @@ input {
     text-align: center;
 }
 
-.submit {
+.btn {
     border-radius: 0.3rem;
     border: none;
     margin: 20px;
@@ -75,9 +75,10 @@ input {
     box-shadow: 0 0 10px 5px;
     font-size: 1.5em;
     text-align: center;
+    background-color: white;
 }
 
-.submit:hover {
+.btn:hover {
     border-radius: 0.3rem;
     border: none;
     margin: 20px;
@@ -110,8 +111,7 @@ input {
 }
 
 .button-box {
-    height: 300px;
-    width: 100%;
+
     margin: 15px;
     display: inline-grid;
     grid-template-columns: auto auto;
@@ -121,7 +121,7 @@ input {
 }
 
 .answers {
-    height: 100px;
+    height: 80px;
     width: 350px;
     margin: 10px;
     border: solid 2px black;
@@ -139,15 +139,6 @@ input {
     box-shadow: 0 0 10px 2px;
 }
 
-.next {
-    background-color: white;
-    height: 50px;
-    width: 200px;
-    margin-bottom: 30px;
-    border: solid 2px black;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 2px;
-}
 
 #game-results {
     height: 600px;
@@ -171,49 +162,7 @@ input {
     box-shadow: 0 0 10px 5px;
 }
 
-.play-again {
-    border-radius: 0.3rem;
-    border: none;
-    margin: 20px;
-    width: 300px;
-    height: 50px;
-    box-shadow: 0 0 10px 5px;
-    font-size: 1.5em;
-    text-align: center;
-}
 
-.play-again:hover {
-    border-radius: 0.3rem;
-    border: none;
-    margin: 20px;
-    width: 320px;
-    height: 60px;
-    box-shadow: 0 0 10px 5px;
-    font-size: 2em;
-    text-align: center;
-}
-
-.go-home {
-    border-radius: 0.3rem;
-    border: none;
-    margin: 20px;
-    width: 300px;
-    height: 50px;
-    box-shadow: 0 0 10px 5px;
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.go-home:hover {
-    border-radius: 0.3rem;
-    border: none;
-    margin: 20px;
-    width: 320px;
-    height: 60px;
-    box-shadow: 0 0 10px 5px;
-    font-size: 2em;
-    text-align: center;
-}
 
 .hide {
     display: none
@@ -271,7 +220,7 @@ footer {
 
 @media only screen and (max-width: 950px) {
 
-        .heading {
+.heading {
     font-size: 160%;
 }
     
@@ -339,6 +288,18 @@ header {
 .button-box {
     margin: 5px;
     gap: 10px;
+}
+
+.btn {
+    height: 30px;
+    width: 110px;
+}
+
+.btn:hover {
+
+    width: 120px;
+    height: 40px;
+    font-size: 1.8em;
 
 }
         
