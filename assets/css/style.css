@@ -16,31 +16,37 @@ header {
     text-align: center;
     font-size: 400%;
     font-family: Unbounded, 'san-serif';
-    text-shadow: 10px 10px 10px black;
+    text-shadow: 1px 1px 2px black, 0 0 30px white, 0 0 20px white;
 }
 
 .quiz-area {
-    background-color: rgb(39, 58, 77);
+    background-image: url("../images/blue-abstract.jpg");
     height: 600px;
     width: 60%;
     border: solid 5px black;
     margin: auto;
     margin-top: 75px;
     border-radius: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     box-shadow: 0 0 20px 5px;
     
 }
 
+#game-play {
+    height: 600px;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px
+}
+
 .question-box {
     background-color: white;
-    height: 180px;
-    width: 80%;
+    height: 100px;
+    width: 600px;
     border: solid 2px black;
     display: flex;
-    margin: auto;
     margin-top: 20px;
     border-radius: 15%;
     box-shadow: 0 0 10px 2px;
@@ -49,7 +55,7 @@ header {
 .button-box {
     height: 300px;
     width: 100%;
-    margin: auto;
+    margin: 15px;
     display: inline-grid;
     grid-template-columns: auto auto;
     align-items: center;
@@ -57,7 +63,7 @@ header {
     
 }
 
-button {
+.answers {
     height: 120px;
     width: 350px;
     margin: 10px;
@@ -97,7 +103,7 @@ button {
      
 }
 
-button {
+.answers {
     height: 120px;
     width: 300px;
     margin: 10px;
@@ -123,7 +129,7 @@ button {
     width: 80%;   
 }
     
-button {
+.answers {
     height: 120px;
     width: 200px;
     margin: 10px;
@@ -135,6 +141,10 @@ button {
   
 @media only screen and (max-width: 650px) {
 
+header {
+    height: 40px
+}
+
 .heading {
     font-size: 160%;
 }
@@ -143,20 +153,33 @@ button {
     border: solid 5px black;
     margin-top: 10px;
     width: 90%;
+    
 }
         
 .question-box {
              
-    width: 80%;
+    width: 140%;
              
 }
         
-button {
+.answers {
     height: 120px;
-    width: 150px;
+    width: 130px;
     margin: 0px;
     border: solid 2px black;
     border-radius: 10px;
+}
+
+.score {
+    height: 30px;
+    width: 110px;
+
+}
+
+.button-box {
+    margin: 5px;
+    gap: 10px;
+
 }
         
             }
