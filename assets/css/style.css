@@ -34,6 +34,8 @@ header {
     
 }
 
+/* login and rules screen elements */
+
 #login-rules {
     height: 600px;
     width: 60%;
@@ -66,6 +68,8 @@ input {
     text-align: center;
 }
 
+/* button elements */
+
 .btn {
     border-radius: 0.3rem;
     border: none;
@@ -89,9 +93,9 @@ input {
     text-align: center;
 }
 
+/* game play screen elements */
+
 #game-play {
-    height: 600px;
-    width: 60%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -102,7 +106,7 @@ input {
 .question-box {
     background-color: white;
     height: 150px;
-    width: 600px;
+    width: 80%;
     border: solid 2px black;
     display: flex;
     margin-top: 20px;
@@ -139,6 +143,8 @@ input {
     box-shadow: 0 0 10px 2px;
 }
 
+/* results / end game screen elements */
+
 
 #game-results {
     height: 600px;
@@ -165,8 +171,10 @@ input {
 
 
 .hide {
-    display: none
+    display: none !important;
 }
+
+/* footer screen elements */
 
 footer {
     width: 100%;
@@ -194,17 +202,17 @@ footer {
 
 @media only screen and (max-width: 1300px) {
 
-    .heading {
+.heading {
     font-size: 300%;
 }
 
 .quiz-area {
-    border: solid 5px black;
+    border: solid 2px black;
     width: 70%;
 }
 
 .question-box {     
-    width: 650px;
+    width: 80%;
      
 }
 
@@ -267,7 +275,8 @@ header {
         
 .question-box {
              
-    width: 140%;
+    width: 90%;
+    margin: 5px
              
 }
         
