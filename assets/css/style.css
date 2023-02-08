@@ -39,10 +39,11 @@ margin-bottom: 20px;
     height: 300px;
     width: 600px;
     border: solid 1px black;
-    display: flex;
+    text-align: center;
     margin-top: 50px;
     border-radius: 15%;
     box-shadow: 0 0 10px 5px;
+    
 }
 
 input {
@@ -120,7 +121,7 @@ input {
     box-shadow: 0 0 10px 2px;
 }
 
-.score {
+.score-box {
     background-color: white;
     height: 50px;
     width: 200px;
@@ -128,6 +129,7 @@ input {
     border: solid 2px black;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px;
+    text-align: center;
 }
 
 /* results / end game screen elements */
@@ -271,7 +273,7 @@ header {
     border-radius: 10px;
 }
 
-.score {
+.score-box {
     height: 30px;
     width: 110px;
 
