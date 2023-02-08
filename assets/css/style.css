@@ -4,7 +4,8 @@ body {
     background-image: url("../images/blue-universe.jpg");
     background-size: cover;
     font-family: Unbounded, 'san-serif';
-    
+    padding: 0;
+    margin: 0
 }
 
 header {
@@ -91,14 +92,13 @@ input {
     padding: 5px
 }
 
-.question-box {
+#question-box {
     background-color: white;
     height: 150px;
     width: 60%;
-
     display: flex;
     margin-top: 20px;
-    border-radius: 15%;
+    border-radius: 10px;
     box-shadow: 0 0 10px 2px;
 }
 
@@ -106,7 +106,7 @@ input {
 
     margin: 15px;
     display: inline-grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, auto);
     align-items: center;
     justify-content: space-around;
     
@@ -119,6 +119,18 @@ input {
     border: solid 2px black;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px;
+}
+
+.answers:hover {
+    background-color: gold;
+}
+
+.answers.correct {
+    background-color: green;
+}
+
+.answers.incorrect {
+    background-color: red;
 }
 
 .score-box {

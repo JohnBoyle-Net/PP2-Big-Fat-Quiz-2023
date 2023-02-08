@@ -18,36 +18,42 @@
 
 
 <!-- Login and rules panel display -->   
-    <div id="login-rules" >
+    <div id="login-rules">
         <div class="rules">
             <h1>HOW TO PLAY</h1>
             <ol>
                 <li>Enter your name in the box below and click on START</li>
+                <br>
+                <li>Click on the correct answer and it will turn GREEN</li>
+                <br>
+                <li>Click on the wrong answer and it will turn RED</li>
+                <br>
+                <li>You can see your progress displayed above the question</li>
             </ol>
         </div>
         
         <input type="text" class="name" placeholder="Enter your name here"></input>
-        <button class="btn">START</button>
+        <button id="start-btn" class="btn">START</button>
     </div>
 <!-- Game play panel display -->   
-    <div id="game-play">
-            <div class="score-box">
+    <div id="game-play" class="hide">
+            <div class="score-box" >
                     <p class="score">Score <span id="score">0</span>/<span id="number-of-qs">0</span></p>
             </div>
-            <div class="question-box"></div>
+            <div id="question-box"></div>
             <div class="button-box">
                 <button class="answers"></button>
                 <button class="answers"></button>
                 <button class="answers"></button>
                 <button class="answers"></button>
             </div>
-            <button class="btn">NEXT</button>
+            <button class="btn next-btn">NEXT</button>
     </div>
     
 <!-- End game / Results panel display -->   
-    <div id="game-results">
+    <div id="game-results" class="hide">
         <div class="score-display"></div>
-        <button class="btn">PLAY AGAIN</button>
+        <button class="btn play-btn">PLAY AGAIN</button>
         <button class="btn">GO HOME</button>
     </div>
 
