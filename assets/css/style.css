@@ -163,6 +163,9 @@ input {
     width: 600px;
     border: solid 1px black;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 50px;
     margin-bottom: 30px;
     border-radius: 15%;
