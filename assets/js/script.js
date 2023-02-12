@@ -1,10 +1,10 @@
 const startButton = document.getElementById('start-btn')
 
-const playGameArea = document.getElementById('game-play')
+
 
 const quizRules = document.getElementById('login-rules');
-const questionBox = document.getElementById('question-box')
 
+const playGameArea = document.getElementById('game-play')
 
 startButton.addEventListener('click', startGame)
 
@@ -12,11 +12,13 @@ function startGame() {
     console.log('started')
     quizRules.classList.add('hide')
     playGameArea.classList.remove('hide')
-    setNextQuestion()
+    setFirstQuestion()
 }
 
-function setNextQuestion() {
-    
+function setFirstQuestion() {
+    const questionBox = document.getElementById('question-box')
+    let firstQuestion = questions[1].question
+    questionBox.innerHTML = firstQuestion
 }
  
 
@@ -35,7 +37,7 @@ let questions = [
         ]
     },
     {
-        question: 'Which country has the most highest waterfall?',
+        question: 'Which country has the highest waterfall?',
         answer: [
             {text: 'South Africa', correct: false },
             {text: 'USA', correct: false},
@@ -71,3 +73,6 @@ let questions = [
         ]
     }
 ];
+
+
+
