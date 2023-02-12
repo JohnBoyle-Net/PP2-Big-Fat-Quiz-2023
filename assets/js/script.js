@@ -1,31 +1,3 @@
-const startButton = document.getElementById('start-btn')
-
-
-
-const quizRules = document.getElementById('login-rules');
-
-const playGameArea = document.getElementById('game-play')
-
-startButton.addEventListener('click', startGame)
-
-function startGame() {
-    console.log('started')
-    quizRules.classList.add('hide')
-    playGameArea.classList.remove('hide')
-    setFirstQuestion()
-}
-
-function setFirstQuestion() {
-    const questionBox = document.getElementById('question-box')
-    let firstQuestion = questions[1].question
-    questionBox.innerHTML = firstQuestion
-}
- 
-
-
-// questions and answers array. 
-
-
 let questions = [
     {
         question: 'Which country has the most Pyramids?',
@@ -74,5 +46,50 @@ let questions = [
     }
 ];
 
+
+
+
+
+const startButton = document.getElementById('start-btn')
+
+
+
+const quizRules = document.getElementById('login-rules');
+
+const playGameArea = document.getElementById('game-play')
+
+startButton.addEventListener('click', startGame)
+
+function startGame() {
+    console.log('started')
+    quizRules.classList.add('hide')
+    playGameArea.classList.remove('hide')
+    setFirstQuestion()
+}
+
+function setFirstQuestion() {
+    const questionBox = document.getElementById('question-box')
+    let firstQuestion = questions[0].question
+    questionBox.innerHTML = firstQuestion
+    let firstAnswerBox = document.getElementById('one');
+    let firstAnswer = questions[0].answer[0].text;
+    firstAnswerBox.innerHTML = firstAnswer
+    let secondAnswerBox = document.getElementById('two');
+    let secondAnswer = questions[0].answer[1].text;
+    secondAnswerBox.innerHTML = secondAnswer
+    let thirdAnswerBox = document.getElementById('three');
+    let thirdAnswer = questions[0].answer[2].text;
+    thirdAnswerBox.innerHTML = thirdAnswer
+    let fourthAnswerBox = document.getElementById('four');
+    let forthAnswer = questions[0].answer[3].text;
+    fourthAnswerBox.innerHTML = forthAnswer
+}
+
+    
+
+ 
+
+
+// questions and answers array. 
 
 
