@@ -85,6 +85,21 @@ function setFirstQuestion() {
     fourthAnswerBox.innerHTML = forthAnswer
 }
 
+let answerBox = document.getElementsByClassName('answers')
+
+function displayCorrectAnswer() {
+    
+    if (questions[0].answer.correct = true) {
+        add.classList('answers.correct').answerBox
+    } else {
+        add.classList('answers.incorrect').answerBox
+    }
+}
+
+answerBox.addEventListener('click', displayCorrectAnswer)
+
+
+
     
 
  
