@@ -59,10 +59,14 @@ let questions = [
 const startButton = document.getElementById('start-btn')
 const quizRules = document.getElementById('login-rules');
 const playGameArea = document.getElementById('game-play')
+const questionBox = document.getElementById('question-box')
+const nextButton = document.getElementById('next-btn')
 
 // function to start the quiz by loading quiz area (question and answers) and the score display
 
 startButton.addEventListener('click', startGame)
+
+
 
 function startGame() {
     console.log('started')
@@ -83,7 +87,7 @@ function displayNumberOfQuestions () {
 // function to display the first question and the possible answers
 
 function setFirstQuestion() {
-    const questionBox = document.getElementById('question-box')
+    
     let firstQuestion = questions[0].question
     questionBox.innerHTML = firstQuestion
     let firstAnswerBox = document.getElementById('one');
@@ -103,7 +107,7 @@ function setFirstQuestion() {
 // function to display correct answer. When user clicks on an answer it should turn either green or red. Correct answer will be green 
 // and all incorrect will be red
 
-// working
+// not working
 
 function displayCorrectAnswer() {
     const answerBoxes = document.getElementsByClassName('answers')
@@ -125,9 +129,26 @@ function incrementUserScore() {
   let oldScore = parseInt(document.getElementById("score").innerText);
   document.getElementById("score").innerText = ++oldScore;
 }
-    
 
- 
+function displayNextQuestion() {
+    let nextQuestion = questions[0].question++
+    questionBox.innerHTML = nextQuestion
+    let firstAnswerBox = document.getElementById('one')++;
+    let firstAnswer = questions[0].answer[0].text++;
+    firstAnswerBox.innerHTML = firstAnswer
+    let secondAnswerBox = document.getElementById('two')++;
+    let secondAnswer = questions[0].answer[1].text++;
+    secondAnswerBox.innerHTML = secondAnswer
+    let thirdAnswerBox = document.getElementById('three')++;
+    let thirdAnswer = questions[0].answer[2].text++;
+    thirdAnswerBox.innerHTML = thirdAnswer
+    let fourthAnswerBox = document.getElementById('four')++;
+    let forthAnswer = questions[0].answer[3].text++;
+    fourthAnswerBox.innerHTML = forthAnswer
+
+  }    
+
+nextButton.addEventListener('click', displayNextQuestion) 
 
 });
 
