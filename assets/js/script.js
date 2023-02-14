@@ -1,3 +1,8 @@
+addEventListener('DOMContentLoaded', (event) => {
+
+
+// questions and answers arrays 
+
 let questions = [
     {
         question: 'Which country has the most Pyramids?',
@@ -51,11 +56,7 @@ let questions = [
 
 
 const startButton = document.getElementById('start-btn')
-
-
-
 const quizRules = document.getElementById('login-rules');
-
 const playGameArea = document.getElementById('game-play')
 
 startButton.addEventListener('click', startGame)
@@ -65,7 +66,16 @@ function startGame() {
     quizRules.classList.add('hide')
     playGameArea.classList.remove('hide')
     setFirstQuestion()
+    displayNumberOfQuestions ()
 }
+
+
+
+function displayNumberOfQuestions () {
+    const NoOfQs = questions.length;
+    document.getElementById('number-of-qs').innerText = NoOfQs;
+}
+
 
 function setFirstQuestion() {
     const questionBox = document.getElementById('question-box')
@@ -85,26 +95,32 @@ function setFirstQuestion() {
     fourthAnswerBox.innerHTML = forthAnswer
 }
 
+
 let answerBox = document.getElementsByClassName('answers')
 
 function displayCorrectAnswer() {
     
-    if (questions[0].answer.correct = true) {
-        add.classList('answers.correct').answerBox
+    if (questions[0].answer.correct===true) {
+        answerBox.classList.add('answers-correct')
     } else {
-        add.classList('answers.incorrect').answerBox
-    }
+        answerBox.classList.add('answers-incorrect')
+    };
+    incrementUserScore()
+};
+
+answerBox.addEventListener('click', displayCorrectAnswer())
+
+
+
+function incrementUserScore() {
+  let oldScore = parseInt(document.getElementById("score").innerText);
+  document.getElementById("score").innerText = ++oldScore;
 }
-
-answerBox.addEventListener('click', displayCorrectAnswer)
-
-
-
     
 
  
 
+});
 
-// questions and answers array. 
 
 
