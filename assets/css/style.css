@@ -133,11 +133,11 @@ input {
     background-color: gold;
 }
 
-.answers-correct {
+.correct {
     background-color: green;
 }
 
-.answers-incorrect {
+.incorrect {
     background-color: red;
 }
 

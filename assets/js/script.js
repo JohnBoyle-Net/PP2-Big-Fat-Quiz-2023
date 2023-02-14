@@ -48,7 +48,8 @@ let questions = [
             {text: 'Italy', correct: false},
             {text: 'Switzerland', correct: false}
         ]
-    }
+    },
+
 ];
 
 
@@ -59,6 +60,8 @@ const startButton = document.getElementById('start-btn')
 const quizRules = document.getElementById('login-rules');
 const playGameArea = document.getElementById('game-play')
 
+// function to start the quiz by loading quiz area (question and answers) and the score display
+
 startButton.addEventListener('click', startGame)
 
 function startGame() {
@@ -67,15 +70,17 @@ function startGame() {
     playGameArea.classList.remove('hide')
     setFirstQuestion()
     displayNumberOfQuestions ()
+    displayCorrectAnswer()
 }
 
-
+// function to calculate and display total number of questions. Total will increase if more questions are added.
 
 function displayNumberOfQuestions () {
     const NoOfQs = questions.length;
     document.getElementById('number-of-qs').innerText = NoOfQs;
 }
 
+// function to display the first question and the possible answers
 
 function setFirstQuestion() {
     const questionBox = document.getElementById('question-box')
@@ -95,22 +100,26 @@ function setFirstQuestion() {
     fourthAnswerBox.innerHTML = forthAnswer
 }
 
+// function to display correct answer. When user clicks on an answer it should turn either green or red. Correct answer will be green 
+// and all incorrect will be red
 
-let answerBox = document.getElementsByClassName('answers')
+// working
 
 function displayCorrectAnswer() {
-    
-    if (questions[0].answer.correct===true) {
-        answerBox.classList.add('answers-correct')
+    const answerBoxes = document.getElementsByClassName('answers')
+    if (questions.correct) {
+        answerBoxes.classList.add('correct');
     } else {
-        answerBox.classList.add('answers-incorrect')
+        answerBoxes.classList.add('incorrect');
     };
     incrementUserScore()
+    answerBoxes.addEventListener('click', displayCorrectAnswer())
 };
 
-answerBox.addEventListener('click', displayCorrectAnswer())
 
 
+
+// function to increase the score displayed when a correct answer is selected
 
 function incrementUserScore() {
   let oldScore = parseInt(document.getElementById("score").innerText);
