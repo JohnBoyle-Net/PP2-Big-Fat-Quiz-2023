@@ -61,6 +61,7 @@ const quizRules = document.getElementById('login-rules');
 const playGameArea = document.getElementById('game-play')
 const questionBox = document.getElementById('question-box')
 const nextButton = document.getElementById('next-btn')
+const resultsArea = document.getElementById('game-results')
 
 // function to start the quiz by loading quiz area (question and answers) and the score display
 
@@ -149,7 +150,14 @@ function displayNextQuestion() {
   }    
 
 nextButton.addEventListener('click', displayNextQuestion) 
-
+let home = document.getElementById('home')
+function goHome() {
+    quizRules.classList.remove('hide')
+    playGameArea.classList.add('hide')
+    resultsArea.classList.add('hide')
+    
+}
+home.addEventListener('click', goHome)
 });
 
 
