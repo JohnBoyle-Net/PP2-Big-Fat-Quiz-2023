@@ -150,14 +150,29 @@ function displayNextQuestion() {
   }    
 
 nextButton.addEventListener('click', displayNextQuestion) 
-let home = document.getElementById('home')
+
+
+// function to bring user back to login and rules screen
+
 function goHome() {
+    let home = document.getElementById('home')
     quizRules.classList.remove('hide')
     playGameArea.classList.add('hide')
     resultsArea.classList.add('hide')
-    
+    home.addEventListener('click', goHome)
 }
-home.addEventListener('click', goHome)
+
+// function to bring user back to start of quiz
+
+function playAgain() {
+    let again = document.getElementById('play-btn')
+    playGameArea.classList.remove('hide')
+    resultsArea.classList.add('hide')
+    again.addEventListener('click', playAgain)
+
+}
+
+
 });
 
 
