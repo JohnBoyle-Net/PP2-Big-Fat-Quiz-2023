@@ -3,7 +3,7 @@ addEventListener('DOMContentLoaded', (event) => {
 
 // questions and answers arrays 
 
-let questions = [
+const questions = [
     {
         question: 'Which country has the most Pyramids?',
         answer: [
@@ -54,6 +54,26 @@ let questions = [
 
 
 
+let i = 0; 
+    iLoop:
+    while (i < questions.length) {
+        let j = 0;
+        jLoop:
+        while (j < 4) {
+            if (j === 0) {
+                
+        }
+        console.log(questions[i].answer[j])
+        j++;
+    }
+    if (i === 0) {
+        console.log(questions[i].question)
+        break;
+    }
+    console.log(questions[i].question)
+    i++;
+}
+
 
 
 const startButton = document.getElementById('start-btn')
@@ -88,9 +108,27 @@ function displayNumberOfQuestions () {
 // function to display the first question and the possible answers
 
 function setFirstQuestion() {
+    let i = 0; 
+    iLoop:
+    while (i < questions.length) {
+        let j = 0;
+        jLoop:
+        while (j < 4) {
+            if (j === 0) {
+                
+        }
+        console.log(questions[i].answer[j])
+        j++;
+    }
+    if (i === 0) {
+        console.log(questions[i].question)
+        break;
+    }
     
-    let firstQuestion = questions[0].question
-    questionBox.innerHTML = firstQuestion
+    i++;
+    }
+    questionBox.innerHTML = (questions[i].question)
+
     let firstAnswerBox = document.getElementById('one');
     let firstAnswer = questions[0].answer[0].text;
     firstAnswerBox.innerHTML = firstAnswer
@@ -110,7 +148,7 @@ function setFirstQuestion() {
 
 // not working
 
-function displayCorrectAnswer() {
+function displayCorrectAnswer(event) {
     const answerBoxes = document.getElementsByClassName('answers')
     if (questions.correct) {
         answerBoxes.classList.add('correct');
@@ -132,6 +170,7 @@ function incrementUserScore() {
 }
 
 function displayNextQuestion() {
+   
     let nextQuestion = questions[0].question++
     questionBox.innerHTML = nextQuestion
     let firstAnswerBox = document.getElementById('one')++;
@@ -173,7 +212,9 @@ function playAgain() {
 }
 
 
-});
+}
 
 
 
+
+)
