@@ -54,27 +54,6 @@ const questions = [
 
 
 
-let i = 0; 
-    iLoop:
-    while (i < questions.length) {
-        let j = 0;
-        jLoop:
-        while (j < 4) {
-            if (j === 0) {
-                
-        }
-        console.log(questions[i].answer[j])
-        j++;
-    }
-    if (i === 0) {
-        console.log(questions[i].question)
-        break;
-    }
-    console.log(questions[i].question)
-    i++;
-}
-
-
 
 const startButton = document.getElementById('start-btn')
 const quizRules = document.getElementById('login-rules');
@@ -110,38 +89,30 @@ function displayNumberOfQuestions () {
 function setFirstQuestion() {
     let i = 0; 
     iLoop:
-    while (i < questions.length) {
+    while (i < 5) {
         let j = 0;
         jLoop:
-        while (j < 4) {
+        while (j < 5) {
             if (j === 0) {
-                
+        document.getElementById('four').innerHTML = questions[i].answer[j].text;
+        document.getElementById('three').innerHTML = questions[i].answer[j+1].text;
+        document.getElementById('one').innerHTML = questions[i].answer[j+2].text;
+        document.getElementById('two').innerHTML = questions[i].answer[j+3].text;  
         }
-        console.log(questions[i].answer[j])
+        
         j++;
     }
     if (i === 0) {
-        console.log(questions[i].question)
+        
+        
+        questionBox.innerHTML= questions[i].question
         break;
     }
-    
+   
     i++;
+    
     }
-    questionBox.innerHTML = (questions[i].question)
-
-    let firstAnswerBox = document.getElementById('one');
-    let firstAnswer = questions[0].answer[0].text;
-    firstAnswerBox.innerHTML = firstAnswer
-    let secondAnswerBox = document.getElementById('two');
-    let secondAnswer = questions[0].answer[1].text;
-    secondAnswerBox.innerHTML = secondAnswer
-    let thirdAnswerBox = document.getElementById('three');
-    let thirdAnswer = questions[0].answer[2].text;
-    thirdAnswerBox.innerHTML = thirdAnswer
-    let fourthAnswerBox = document.getElementById('four');
-    let forthAnswer = questions[0].answer[3].text;
-    fourthAnswerBox.innerHTML = forthAnswer
-}
+} 
 
 // function to display correct answer. When user clicks on an answer it should turn either green or red. Correct answer will be green 
 // and all incorrect will be red
@@ -160,7 +131,35 @@ function displayCorrectAnswer(event) {
 };
 
 
+function setNextQuestion() {
+    let i = 0; 
+    iLoop:
+    while (i < 5) {
+        let j = 0;
+        jLoop:
+        while (j < 5) {
+            if (j === 0) {
+                document.getElementById('four').innerHTML = questions[i+1].answer[j].text;
+                document.getElementById('three').innerHTML = questions[i+1].answer[j+1].text;
+                document.getElementById('one').innerHTML = questions[i+1].answer[j+2].text;
+                document.getElementById('two').innerHTML = questions[i+1].answer[j+3].text;  
+        }
+        
+        j++;
+    }
+    if (i === 0) {
+        
+        
+        questionBox.innerHTML= questions[i+1].question
+        break;
+    }
+   
+    i++;
+    
+    }
+}
 
+nextButton.addEventListener('click', setNextQuestion) 
 
 // function to increase the score displayed when a correct answer is selected
 
@@ -169,26 +168,7 @@ function incrementUserScore() {
   document.getElementById("score").innerText = ++oldScore;
 }
 
-function displayNextQuestion() {
-   
-    let nextQuestion = questions[0].question++
-    questionBox.innerHTML = nextQuestion
-    let firstAnswerBox = document.getElementById('one')++;
-    let firstAnswer = questions[0].answer[0].text++;
-    firstAnswerBox.innerHTML = firstAnswer
-    let secondAnswerBox = document.getElementById('two')++;
-    let secondAnswer = questions[0].answer[1].text++;
-    secondAnswerBox.innerHTML = secondAnswer
-    let thirdAnswerBox = document.getElementById('three')++;
-    let thirdAnswer = questions[0].answer[2].text++;
-    thirdAnswerBox.innerHTML = thirdAnswer
-    let fourthAnswerBox = document.getElementById('four')++;
-    let forthAnswer = questions[0].answer[3].text++;
-    fourthAnswerBox.innerHTML = forthAnswer
 
-  }    
-
-nextButton.addEventListener('click', displayNextQuestion) 
 
 
 // function to bring user back to login and rules screen
