@@ -1,7 +1,7 @@
 
 
 body {
-    background-image: url("../images/blue-universe.jpg");
+    background-image: url("../images/sky.jpg");
     background-size: cover;
     font-family: Unbounded, 'san-serif';
     padding: 0;
@@ -105,13 +105,16 @@ input {
     box-shadow: 0 0 10px 2px;
 }
 
-.button-box {
-
+#button-box {
+    max-height: 500px;
+    max-width: 80%;
     margin: 15px;
-    display: inline-grid;
-    grid-template-columns: repeat(2, auto);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     text-align: center;
+    justify-content: center;
     
     
 }
