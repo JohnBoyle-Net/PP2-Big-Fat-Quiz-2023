@@ -114,6 +114,7 @@ function showQuestion(question) {
         button.classList.add('answers')
         if(answer.correct) {
             button.dataset.correct = answer.correct
+            
         }
 
         button.addEventListener('click', selectAnswer)
@@ -131,6 +132,10 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
+    if(correct) {
+        let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++oldScore;
+    }
     setStatusClass(document.body, correct)
     Array.from(buttonBox.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
@@ -143,59 +148,33 @@ function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
         element.classList.add('correct')
+        
     } else {
         element.classList.add('incorrect')
     }
-
+    
     
 }
 
 function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('incorrect')
-    
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 // function to increase the score displayed when a correct answer is selected
 
 function incrementUserScore() {
-  let oldScore = parseInt(document.getElementById("score").innerText);
-  document.getElementById("score").innerText = ++oldScore;
-}
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++oldScore;
+
+        }
+    
+   
+  
+
 
 
 
