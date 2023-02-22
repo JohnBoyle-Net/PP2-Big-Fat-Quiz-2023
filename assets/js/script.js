@@ -1,6 +1,3 @@
-
-
-
 // questions and answers arrays 
 
 const questions = [
@@ -61,30 +58,35 @@ const playGameArea = document.getElementById('game-play')
 const questionBox = document.getElementById('question-box')
 const nextButton = document.getElementById('next-btn')
 const resultsArea = document.getElementById('game-results')
-const answerBoxes = document.getElementsByClassName('answers')
 const buttonBox = document.getElementById('button-box')
+let currentQuestionIndex = ""
 
-// function to start the quiz by loading quiz area (question and answers) and the score display
+// event listener to start the quiz by loading quiz area (question and answers) and the score display
 
 startButton.addEventListener('click', startGame)
 
+// event listener for Next button to load next question, unless there are no questions left user will go to results screen
+
 nextButton.addEventListener('click', () => {
+    
+    if (questions.length > currentQuestionIndex +1) {
     resetState()
     currentQuestionIndex++
-    
-    setNextQuestion();
+    setNextQuestion(); }
+    else {
+        playGameArea.classList.add('hide')
+        resultsArea.classList.remove('hide')
+    }
 })
 
-let shuffledQuestion = ""
-let currentQuestionIndex = ""
-
+// function to start quiz when user clicks start button
 
 function startGame() {
     console.log('started')
     quizRules.classList.add('hide')
+    resultsArea.classList.add('hide')
     playGameArea.classList.remove('hide')
     displayNumberOfQuestions ()
-    questionsOrdered = questions
     currentQuestionIndex = 0
     setNextQuestion()
 }
@@ -96,15 +98,8 @@ function displayNumberOfQuestions() {
     document.getElementById('number-of-qs').innerText = NoOfQs;
 }
 
-function setNextQuestion() {
-    
-    showQuestion(questionsOrdered[currentQuestionIndex])
-    
-        
-        
-}
 
- 
+// function to build questions and answers from questions array
 
 function showQuestion(question) {
     questionBox.innerText = question.question
@@ -114,35 +109,55 @@ function showQuestion(question) {
         button.classList.add('answers')
         if(answer.correct) {
             button.dataset.correct = answer.correct
-            
         }
-
         button.addEventListener('click', selectAnswer)
         buttonBox.appendChild(button)
-})
+        })
+  
+  
+
 }
 
+// function to display questions 
+
+function setNextQuestion() {
+    resetState()
+    showQuestion(questions[currentQuestionIndex])
+       
+    
+}
+
+// function to remove previous answers when user moves to new question
+
 function resetState() {
-    clearStatusClass(document.body)
     while (buttonBox.firstChild) {
         buttonBox.removeChild(buttonBox.firstChild)
     }
   }
 
+// function to  identify if answer is correct or incorrect
+//  and increment score if correct
+
 function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
+    
+    Array.from(buttonBox.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    }
+    )
     if(correct) {
         let oldScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++oldScore;
     }
-    setStatusClass(document.body, correct)
-    Array.from(buttonBox.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-        
-    })
+    if (questions.length < currentQuestionIndex + 1) {
+    
+        playGameArea.classList.add('hide')
+        resultsArea.classList.remove('hide')
+    }
+    }
 
-}
+// function to add class to buttons to identify correct answer for each question
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)
@@ -151,33 +166,16 @@ function setStatusClass(element, correct) {
         
     } else {
         element.classList.add('incorrect')
-    }
-    
-    
+    }   
 }
+
+// function to remove class added to identify correct answer for each question
 
 function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('incorrect')
 
 }
-
-
-
-// function to increase the score displayed when a correct answer is selected
-
-function incrementUserScore() {
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = ++oldScore;
-
-        }
-    
-   
-  
-
-
-
-
 
 // function to bring user back to login and rules screen
 
@@ -196,7 +194,6 @@ function playAgain() {
     playGameArea.classList.remove('hide')
     resultsArea.classList.add('hide')
     again.addEventListener('click', playAgain)
-
 }
 
 
