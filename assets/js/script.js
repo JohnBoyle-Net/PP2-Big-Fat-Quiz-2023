@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+
 // questions and answers arrays 
 
 const questions = [
@@ -201,4 +203,4 @@ function playAgain() {
 
 
 
-
+});
