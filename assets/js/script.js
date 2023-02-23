@@ -185,27 +185,26 @@ function clearStatusClass(element) {
 }
 
 // function to bring user back to login and rules screen
-
-function goHome() {
     let home = document.getElementById('home')
+function goHome() {
+
     quizRules.classList.remove('hide')
     playGameArea.classList.add('hide')
     resultsArea.classList.add('hide')
-    home.addEventListener('click', goHome)
+
 }
 
 // function to bring user back to start of quiz
-
+let again = document.getElementById('play-btn')
 function playAgain() {
-    let again = document.getElementById('play-btn')
-    playGameArea.classList.remove('hide')
-    resultsArea.classList.add('hide')
-    again.addEventListener('click', playAgain)
+    startGame()
+    
 }
 
-
-
+again.addEventListener('click', playAgain)
+home.addEventListener('click', goHome)
 
 
 
 });
+
