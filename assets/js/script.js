@@ -72,7 +72,7 @@ startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     
     if (questions.length > currentQuestionIndex +1) {
-    resetState()
+    
     currentQuestionIndex++
     setNextQuestion(); }
     else {
@@ -91,6 +91,7 @@ nextButton.addEventListener('click', () => {
 // function to start quiz when user clicks start button
 
 function startGame() {
+    resetState()
     console.log('started')
     quizRules.classList.add('hide')
     resultsArea.classList.add('hide')
@@ -98,6 +99,7 @@ function startGame() {
     displayNumberOfQuestions ()
     currentQuestionIndex = 0
     setNextQuestion()
+    nextButton.innerText = "NEXT"
 }
 
 // function to calculate and display total number of questions. Total will increase if more questions are added.
