@@ -156,13 +156,13 @@ function selectAnswer(e) {
     
     Array.from(buttonBox.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
-        
+        button.disabled = true
     }
     )
     if(correct) {
         let oldScore = parseInt(document.getElementById("score").innerText);
         document.getElementById("score").innerText = ++oldScore;
-        selectedButton.disabled = true
+        
     }
     if (questions.length < currentQuestionIndex + 1) {
     

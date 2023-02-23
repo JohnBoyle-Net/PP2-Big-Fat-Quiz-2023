@@ -3,6 +3,7 @@
 body {
     background-image: url("../images/sky.jpg");
     background-size: cover;
+    overflow: hidden;
     font-family: Unbounded, 'san-serif';
     padding: 0;
     margin: 0;
@@ -152,6 +153,7 @@ input {
     border-radius: 10px;
     box-shadow: 0 0 10px 2px;
     text-align: center;
+    align-items: center;
 }
 
 /* results / end game screen elements */
@@ -263,6 +265,21 @@ footer {
     border: solid 2px black;
     border-radius: 10px;
 }
+
+.rules h1 {
+    font-size: 1.2rem;
+    
+}
+
+.rules ol {
+
+    padding-left: 20px;
+}
+
+.rules ol li {
+    font-size: 0.8rem;
+    padding-left: 0;
+}
     
 }
   
@@ -275,6 +292,17 @@ header {
 .heading {
     font-size: 140%;
 }
+
+input {
+    border-radius: 0.3rem;
+    border: none;
+    margin: 20px;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0 0 10px 5px;
+    font-size: 1.2em;
+    text-align: center;
+}
         
 .rules {
     width: 120%;
@@ -285,9 +313,10 @@ header {
     height: 500px;
 }
         
-.question-box {   
+#question-box {   
     width: 100%;
-    margin: 5px           
+    margin: 5px;
+    font-size: 1.5rem;          
 }
         
 .answers {
@@ -296,12 +325,13 @@ header {
     margin: 0px;
     border: solid 2px black;
     border-radius: 10px;
+    font-size: 1.5rem;
 }
 
 .score-box {
     height: 30px;
     width: 110px;
-
+    font-size: 0.9rem;   
 }
 
 .button-box {
@@ -325,6 +355,11 @@ header {
     width: 120px;
     height: 40px;
     font-size: 1.15em;
+
+}
+
+.rules ol li {
+    font-size: 0.7rem;
 
 }
         
