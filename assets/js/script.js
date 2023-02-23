@@ -83,6 +83,8 @@ nextButton.addEventListener('click', () => {
         playGameArea.classList.add('hide')
         resultsArea.classList.remove('hide')
     }, 1000)
+
+
 }
 })
 
@@ -117,8 +119,9 @@ function showQuestion(question) {
         if(answer.correct) {
             button.dataset.correct = answer.correct
         }
-        button.addEventListener('click', selectAnswer)
+        button.addEventListener('click', selectAnswer);
         buttonBox.appendChild(button)
+        
         })
   
   
@@ -151,17 +154,21 @@ function selectAnswer(e) {
     
     Array.from(buttonBox.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
+        
     }
     )
     if(correct) {
         let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = ++oldScore;
+        document.getElementById("score").innerText = ++oldScore;
+        selectedButton.disabled = true
     }
     if (questions.length < currentQuestionIndex + 1) {
     
         playGameArea.classList.add('hide')
         resultsArea.classList.remove('hide')
     }
+
+    
     }
 
 // function to add class to buttons to identify correct answer for each question
