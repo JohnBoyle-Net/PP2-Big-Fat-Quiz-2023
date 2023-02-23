@@ -76,9 +76,14 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion(); }
     else {
+        console.log("end")
+        nextButton.innerText = "END"
+        setTimeout (() => {
+            
         playGameArea.classList.add('hide')
         resultsArea.classList.remove('hide')
-    }
+    }, 1000)
+}
 })
 
 // function to start quiz when user clicks start button
