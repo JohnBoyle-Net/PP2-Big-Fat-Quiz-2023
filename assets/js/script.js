@@ -108,6 +108,7 @@ function startGame() {
     displayNumberOfQuestions ();
     currentQuestionIndex = 0;
     oldScore = 0;
+    finalScore = 0;
     setNextQuestion();
     nextButton.innerText = "NEXT";
 }
@@ -217,6 +218,7 @@ function resetScore() {
     oldScore = 0;
     finalScore = 0;
     document.getElementById("score").innerText = oldScore;
+    document.getElementById("final-score").innerText = finalScore;
 }
 
 // function to bring user back to login and rules screen
