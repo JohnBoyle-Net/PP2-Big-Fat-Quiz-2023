@@ -149,7 +149,7 @@ function resetState() {
 
 // function to  identify if answer is correct or incorrect
 //  and increment score if correct
-
+let oldScore = parseInt(document.getElementById("score").innerText);
 function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
@@ -160,14 +160,16 @@ function selectAnswer(e) {
     }
     )
     if(correct) {
-        let oldScore = parseInt(document.getElementById("score").innerText);
-        document.getElementById("score").innerText = ++oldScore;
         
+        document.getElementById("score").innerText = ++oldScore;
+        document.getElementById("final-score").innerText = ++finalScore;
+        document.getElementById('final-number-of-qs').innerText = questions.length;
     }
     if (questions.length < currentQuestionIndex + 1) {
     
         playGameArea.classList.add('hide')
         resultsArea.classList.remove('hide')
+        displayFinalScore()
     }
 
     
@@ -191,6 +193,13 @@ function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('incorrect')
 
+}
+let finalScore = parseInt(document.getElementById("final-score").innerText);
+function displayFinalScore() {
+    
+    document.getElementById("final-score").innerText = ++finalScore
+
+    
 }
 
 // function to bring user back to login and rules screen
