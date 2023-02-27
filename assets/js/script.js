@@ -48,6 +48,15 @@ const questions = [
             {text: 'Switzerland', correct: false}
         ]
     },
+    {
+        question: "Which country is the smallest island nation in the world",
+        answer: [
+            {text: 'Ireland', correct: false },
+            {text: 'Marshall Islands', correct: false},
+            {text: 'Nauru', correct: true},
+            {text: 'Malta', correct: false}
+        ]
+    },
 
 ];
 
@@ -233,7 +242,7 @@ home.addEventListener('click', goHome);
 
 
 
-})
+});
 
 
 
