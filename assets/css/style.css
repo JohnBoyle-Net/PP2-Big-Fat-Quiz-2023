@@ -103,6 +103,7 @@ input {
     height: 150px;
     width: 60%;
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 2rem;
@@ -318,8 +319,8 @@ input {
 }
         
 #question-box {   
-    width: 100%;
-    margin: 5px;
+    width: 90%;
+    margin: auto;
     font-size: 1.5rem;          
 }
         
@@ -338,8 +339,8 @@ input {
     font-size: 0.9rem;   
 }
 
-.button-box {
-    margin: 5px;
+#button-box {
+    margin: 0px;
     gap: 10px;
 }
 
