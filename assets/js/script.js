@@ -98,6 +98,7 @@ function startGame() {
     playGameArea.classList.remove('hide')
     displayNumberOfQuestions ()
     currentQuestionIndex = 0
+    oldScore = 0
     setNextQuestion()
     nextButton.innerText = "NEXT"
 }
@@ -202,6 +203,12 @@ function displayFinalScore() {
     
 }
 
+function resetScore() {
+    oldScore = 0
+    finalScore = 0
+    document.getElementById("score").innerText = oldScore;
+}
+
 // function to bring user back to login and rules screen
     let home = document.getElementById('home')
 function goHome() {
@@ -215,6 +222,7 @@ function goHome() {
 // function to bring user back to start of quiz
 let again = document.getElementById('play-btn')
 function playAgain() {
+    resetScore()
     startGame()
     
 }
