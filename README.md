@@ -35,7 +35,7 @@ in a fun way. This website is one page which updates based on the user interacti
     
         1. As a Frequent Visitor, I want to be able to find new categories to keep me entertained and learn new facts.
       
-### [Features](#features)
+## Features
 
 #### Existing Features
 
@@ -111,4 +111,4 @@ in a fun way. This website is one page which updates based on the user interacti
 -   [Photopea:](https://www.photopea.com/) was used to remove white background from favicon icon.
 -   Chrome dev tools to troubleshoot, test and check responsiveness of features.
     
-## Testing
+### Testing
