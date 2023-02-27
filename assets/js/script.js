@@ -216,7 +216,7 @@ function goHome() {
     quizRules.classList.remove('hide')
     playGameArea.classList.add('hide')
     resultsArea.classList.add('hide')
-
+    resetScore()
 }
 
 // function to bring user back to start of quiz
