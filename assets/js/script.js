@@ -54,18 +54,18 @@ const questions = [
 
 
 
-const startButton = document.getElementById('start-btn')
+const startButton = document.getElementById('start-btn');
 const quizRules = document.getElementById('login-rules');
-const playGameArea = document.getElementById('game-play')
-const questionBox = document.getElementById('question-box')
-const nextButton = document.getElementById('next-btn')
-const resultsArea = document.getElementById('game-results')
-const buttonBox = document.getElementById('button-box')
-let currentQuestionIndex = ""
+const playGameArea = document.getElementById('game-play');
+const questionBox = document.getElementById('question-box');
+const nextButton = document.getElementById('next-btn');
+const resultsArea = document.getElementById('game-results');
+const buttonBox = document.getElementById('button-box');
+let currentQuestionIndex = "";
 
 // event listener to start the quiz by loading quiz area (question and answers) and the score display
 
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 
 // event listener for Next button to load next question, unless there are no questions left user will go to results screen
 
@@ -73,34 +73,34 @@ nextButton.addEventListener('click', () => {
     
     if (questions.length > currentQuestionIndex +1) {
     
-    currentQuestionIndex++
+    currentQuestionIndex++;
     setNextQuestion(); }
     else {
-        console.log("end")
-        nextButton.innerText = "END"
+        console.log("end");
+        nextButton.innerText = "END";
         setTimeout (() => {
             
-        playGameArea.classList.add('hide')
-        resultsArea.classList.remove('hide')
-    }, 1000)
+        playGameArea.classList.add('hide');
+        resultsArea.classList.remove('hide');
+    }, 1000);
 
 
 }
-})
+});
 
 // function to start quiz when user clicks start button
 
 function startGame() {
-    resetState()
-    console.log('started')
-    quizRules.classList.add('hide')
-    resultsArea.classList.add('hide')
-    playGameArea.classList.remove('hide')
-    displayNumberOfQuestions ()
-    currentQuestionIndex = 0
-    oldScore = 0
-    setNextQuestion()
-    nextButton.innerText = "NEXT"
+    resetState();
+    console.log('started');
+    quizRules.classList.add('hide');
+    resultsArea.classList.add('hide');
+    playGameArea.classList.remove('hide');
+    displayNumberOfQuestions ();
+    currentQuestionIndex = 0;
+    oldScore = 0;
+    setNextQuestion();
+    nextButton.innerText = "NEXT";
 }
 
 // function to calculate and display total number of questions. Total will increase if more questions are added.
@@ -114,18 +114,18 @@ function displayNumberOfQuestions() {
 // function to build questions and answers from questions array
 
 function showQuestion(question) {
-    questionBox.innerText = question.question
+    questionBox.innerText = question.question;
     question.answer.forEach(answer => {
-        const button = document.createElement('button')   
-        button.innerText = answer.text
-        button.classList.add('answers')
+        const button = document.createElement('button')   ;
+        button.innerText = answer.text;
+        button.classList.add('answers');
         if(answer.correct) {
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
         }
         button.addEventListener('click', selectAnswer);
-        buttonBox.appendChild(button)
+        buttonBox.appendChild(button);
         
-        })
+        });
   
   
 
@@ -134,8 +134,8 @@ function showQuestion(question) {
 // function to display questions 
 
 function setNextQuestion() {
-    resetState()
-    showQuestion(questions[currentQuestionIndex])
+    resetState();
+    showQuestion(questions[currentQuestionIndex]);
        
     
 }
@@ -144,7 +144,7 @@ function setNextQuestion() {
 
 function resetState() {
     while (buttonBox.firstChild) {
-        buttonBox.removeChild(buttonBox.firstChild)
+        buttonBox.removeChild(buttonBox.firstChild);
     }
   }
 
@@ -152,14 +152,15 @@ function resetState() {
 //  and increment score if correct
 let oldScore = parseInt(document.getElementById("score").innerText);
 function selectAnswer(e) {
-    const selectedButton = e.target
-    const correct = selectedButton.dataset.correct
+    const selectedButton = e.target;
+    const correct = selectedButton.dataset.correct;
     
     Array.from(buttonBox.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-        button.disabled = true
+        setStatusClass(button, button.dataset.correct);
+        button.disabled = true;
     }
-    )
+    );
+
     if(correct) {
         
         document.getElementById("score").innerText = ++oldScore;
@@ -168,9 +169,9 @@ function selectAnswer(e) {
     }
     if (questions.length < currentQuestionIndex + 1) {
     
-        playGameArea.classList.add('hide')
-        resultsArea.classList.remove('hide')
-        displayFinalScore()
+        playGameArea.classList.add('hide');
+        resultsArea.classList.remove('hide');
+        displayFinalScore();
     }
 
     
@@ -179,58 +180,60 @@ function selectAnswer(e) {
 // function to add class to buttons to identify correct answer for each question
 
 function setStatusClass(element, correct) {
-    clearStatusClass(element)
+    clearStatusClass(element);
     if (correct) {
-        element.classList.add('correct')
+        element.classList.add('correct');
         
     } else {
-        element.classList.add('incorrect')
+        element.classList.add('incorrect');
     }   
 }
 
 // function to remove class added to identify correct answer for each question
 
 function clearStatusClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('incorrect')
+    element.classList.remove('correct');
+    element.classList.remove('incorrect');
 
 }
 let finalScore = parseInt(document.getElementById("final-score").innerText);
 function displayFinalScore() {
     
-    document.getElementById("final-score").innerText = ++finalScore
+    document.getElementById("final-score").innerText = ++finalScore;
 
     
 }
 
 function resetScore() {
-    oldScore = 0
-    finalScore = 0
+    oldScore = 0;
+    finalScore = 0;
     document.getElementById("score").innerText = oldScore;
 }
 
 // function to bring user back to login and rules screen
-    let home = document.getElementById('home')
+    let home = document.getElementById('home');
 function goHome() {
 
-    quizRules.classList.remove('hide')
-    playGameArea.classList.add('hide')
-    resultsArea.classList.add('hide')
-    resetScore()
+    quizRules.classList.remove('hide');
+    playGameArea.classList.add('hide');
+    resultsArea.classList.add('hide');
+    resetScore();
 }
 
 // function to bring user back to start of quiz
-let again = document.getElementById('play-btn')
+let again = document.getElementById('play-btn');
 function playAgain() {
-    resetScore()
-    startGame()
+    resetScore();
+    startGame();
     
 }
 
-again.addEventListener('click', playAgain)
-home.addEventListener('click', goHome)
+again.addEventListener('click', playAgain);
+home.addEventListener('click', goHome);
 
 
 
-});
+})
+
+
 
