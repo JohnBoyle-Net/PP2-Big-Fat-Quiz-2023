@@ -87,6 +87,11 @@ input {
 
 }
 
+button:disabled {
+    color: black !important;
+
+}
+
 /* game play screen elements */
 
 #game-play {
