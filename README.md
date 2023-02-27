@@ -32,5 +32,28 @@ in a fun way. This website is one page which updates based on the user interacti
         1. As a Returning Visitor, I want to be able to access and view the quiz quickly and easily.
 
     -   #### Frequent Visitor Goals
-
+    
+        1. As a Frequent Visitor, I want to be able to find new categories to keep me entertained and learn new facts.
       
+### [Features](#features)
+
+#### Existing Features
+
+ - __F01 Home screen__
+
+    - The user lands on the home screen which includes the title - The World Quiz along with an area to display the rules/how to play, an input field where the user enters their name and a start button to begin the quiz.
+    The design is simple with a sky background in line with the quiz relating to the world.
+    The title is capitalised with a shadow to make it stand out against the background. The other elements also include the shadow to make the elements stick out on the page.
+    
+ - __F02 Quiz screen__
+    
+    - When the user clicks on the start button on the home screen, the game screen will appear. The quiz screen has 4 elements - the score, the question, the 4 possible answers and a button to move to the next question. These elements have been styled in line with the home screen to maintain the overall design. 
+    The buttons will change color when the user clicks an answer - the correct answer will be green and the incorrect answers will be red. This helps the user to learn as they play the quiz as they can see what the correct answer is.
+    The score will increase if the customer gets the answer correct.
+    The user is unable to select an answer again and must move to the next question.
+    When the user has answered the final question, the next button changes to "END" and the results screen is automatically displayed
+    
+ - __F03 Results screen__
+    
+    - The results screen includes an area to display the final score and a message to the user which includes the name they entered on the home screen.
+    There is also a play again button which will bring you back to question 1 or a home button which brings the user back to the home screen.
