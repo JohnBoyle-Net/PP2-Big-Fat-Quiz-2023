@@ -49,12 +49,48 @@ const questions = [
         ]
     },
     {
-        question: "Which country is the smallest island nation in the world",
+        question: "Which country is the smallest island nation in the world?",
         answer: [
             {text: 'Ireland', correct: false },
             {text: 'Marshall Islands', correct: false},
             {text: 'Nauru', correct: true},
             {text: 'Malta', correct: false}
+        ]
+    },
+    {
+        question: "How many emirates make up the United Arab Emirates?",
+        answer: [
+            {text: '7', correct: true },
+            {text: '9', correct: false},
+            {text: '5', correct: false},
+            {text: '6', correct: false}
+        ]
+    },
+    {
+        question: "Which country boasts the worlds only underwater post office?",
+        answer: [
+            {text: 'Tuvalu', correct: false },
+            {text: 'Solomon Islands', correct: false},
+            {text: 'Kiribati', correct: false},
+            {text: 'Vanuatu', correct: true}
+        ]
+    },
+    {
+        question: "How long is the panama canal?",
+        answer: [
+            {text: '36km', correct: false},
+            {text: '124km', correct: false},
+            {text: '82km', correct: true},
+            {text: '45km', correct: false}
+        ]
+    },
+    {
+        question: "Which country has the longest coastline?",
+        answer: [
+            {text: 'Canada', correct: true},
+            {text: 'Australia', correct: false},
+            {text: 'Norway', correct: false},
+            {text: 'USA', correct: false}
         ]
     },
 
