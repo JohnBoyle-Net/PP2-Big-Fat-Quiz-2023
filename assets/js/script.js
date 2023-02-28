@@ -73,6 +73,7 @@ const buttonBox = document.getElementById('button-box');
 let currentQuestionIndex = "";
 
 // event listener to start the quiz by loading quiz area (question and answers) and the score display
+// this checks if user has entered a name before letting them proceed
 
 startButton.addEventListener('click', verifyUser)
 
@@ -90,26 +91,22 @@ if(document.getElementById('name').value === ""){
 // event listener for Next button to load next question, unless there are no questions left user will go to results screen
 
 nextButton.addEventListener('click', () => {
-    
     if (questions.length > currentQuestionIndex +1) {
-    
-    currentQuestionIndex++;
-    setNextQuestion(); }
-    else {
+        currentQuestionIndex++;
+        setNextQuestion(); 
+    } else {
         console.log("end");
         nextButton.innerText = "END";
         setTimeout (() => {
-            
         playGameArea.classList.add('hide');
         resultsArea.classList.remove('hide');
-    }, 1000);
-
-
-}
+        }, 1000);
+    }
 });
 
-function captureUserName() {
+// function to capture name entered on home screen and display it on results screen
 
+function captureUserName() {
     let name = document.getElementById('name').value;
     document.getElementById('username').innerText = name
 };
@@ -117,7 +114,6 @@ function captureUserName() {
 // function to start quiz when user clicks start button
 
 function startGame() {
-
     resetState();
     console.log('started');
     quizRules.classList.add('hide');
@@ -152,11 +148,7 @@ function showQuestion(question) {
         }
         button.addEventListener('click', selectAnswer);
         buttonBox.appendChild(button);
-        
         });
-  
-  
-
 }
 
 // function to display questions 
@@ -164,8 +156,6 @@ function showQuestion(question) {
 function setNextQuestion() {
     resetState();
     showQuestion(questions[currentQuestionIndex]);
-       
-    
 }
 
 // function to remove previous answers when user moves to new question
@@ -174,44 +164,37 @@ function resetState() {
     while (buttonBox.firstChild) {
         buttonBox.removeChild(buttonBox.firstChild);
     }
-  }
+}
 
 // function to  identify if answer is correct or incorrect
 //  and increment score if correct
+
 let oldScore = parseInt(document.getElementById("score").innerText);
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
-    
     Array.from(buttonBox.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
         button.disabled = true;
-    }
-    );
-
+        });
     if(correct) {
-        
         document.getElementById("score").innerText = ++oldScore;
         document.getElementById("final-score").innerText = ++finalScore;
         document.getElementById('final-number-of-qs').innerText = questions.length;
-    }
+        }
     if (questions.length < currentQuestionIndex + 1) {
-    
         playGameArea.classList.add('hide');
         resultsArea.classList.remove('hide');
         displayFinalScore();
     }
-
-    
-    }
+}
 
 // function to add class to buttons to identify correct answer for each question
 
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
-        element.classList.add('correct');
-        
+        element.classList.add('correct'); 
     } else {
         element.classList.add('incorrect');
     }   
@@ -224,13 +207,15 @@ function clearStatusClass(element) {
     element.classList.remove('incorrect');
 
 }
+
+// function to display final score on results screen
+
 let finalScore = parseInt(document.getElementById("final-score").innerText);
 function displayFinalScore() {
-    
     document.getElementById("final-score").innerText = ++finalScore;
-
-    
 }
+
+// function to reset score when user finishes quiz and wants to replay
 
 function resetScore() {
     oldScore = 0;
@@ -240,9 +225,9 @@ function resetScore() {
 }
 
 // function to bring user back to login and rules screen
-    let home = document.getElementById('home');
-function goHome() {
 
+let home = document.getElementById('home');
+function goHome() {
     quizRules.classList.remove('hide');
     playGameArea.classList.add('hide');
     resultsArea.classList.add('hide');
@@ -250,20 +235,15 @@ function goHome() {
 }
 
 // function to bring user back to start of quiz
+
 let again = document.getElementById('play-btn');
 function playAgain() {
     resetScore();
     startGame();
-    
 }
 
 again.addEventListener('click', playAgain);
 home.addEventListener('click', goHome);
-
-
-
-
-
 
 });
 
