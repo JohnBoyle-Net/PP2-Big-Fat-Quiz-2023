@@ -74,8 +74,18 @@ let currentQuestionIndex = "";
 
 // event listener to start the quiz by loading quiz area (question and answers) and the score display
 
-startButton.addEventListener('click', startGame);
-startButton.addEventListener('click', captureUserName);
+startButton.addEventListener('click', verifyUser)
+
+function verifyUser(){
+if(document.getElementById('name').value === ""){
+    let error = "Please enter a name"
+    alert(error);
+ } else {
+    startGame()
+    captureUserName()
+ }
+}
+
 
 // event listener for Next button to load next question, unless there are no questions left user will go to results screen
 
@@ -98,10 +108,16 @@ nextButton.addEventListener('click', () => {
 }
 });
 
+function captureUserName() {
+
+    let name = document.getElementById('name').value;
+    document.getElementById('username').innerText = name
+};
+
 // function to start quiz when user clicks start button
 
 function startGame() {
-    
+
     resetState();
     console.log('started');
     quizRules.classList.add('hide');
@@ -245,13 +261,7 @@ again.addEventListener('click', playAgain);
 home.addEventListener('click', goHome);
 
 
-function captureUserName() {
 
-    let name = document.getElementById('name').value;
-    document.getElementById('username').innerText = name
-   
-    
-}
 
 
 
