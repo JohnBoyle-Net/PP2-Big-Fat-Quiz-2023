@@ -49,7 +49,7 @@ const questions = [
             {text: 'Italy', correct: false},
             {text: 'Switzerland', correct: false}
         ],
-        fact: "Mount Ebrus is is the highest peak of the Caucasus Mountains standing at 5,642m."
+        fact: "Mount Ebrus is the highest peak of the Caucasus Mountains standing at 5,642m."
     },
     {
         question: "Which country is the smallest island nation in the world?",

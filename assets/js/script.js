@@ -48,8 +48,7 @@ function moveToNextQuestion() {
 // function to capture name entered on home screen and display it on results screen
 
 function captureUserName() {
-    let name = document.getElementById('name').value;
-    document.getElementById('username').innerText = name;
+    document.getElementById('username').innerText = document.getElementById('name').value;;
 }
 
 // function to start quiz when user clicks start button
@@ -93,7 +92,6 @@ function showQuestion(question) {
 
 function showFact(question) {
     document.getElementById('question-box').innerText = question.fact;
-    document.getElementById('question-box').style.fontSize = '20px'
 }
 
 // function to display questions 
