@@ -1,12 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-
-
-
-
-
-let currentQuestionIndex = "";
-
 // event listener to start the quiz by loading quiz area (question and answers) and the score display
 // this checks if user has entered a name before letting them proceed
 
@@ -22,22 +15,27 @@ if(document.getElementById('name').value === ""){
  }
 }
 
+});
+
+let currentQuestionIndex = "";
 
 // event listener for Next button to load next question, unless there are no questions left user will go to results screen
 
-document.getElementById('next-btn').addEventListener('click', () => {
+document.getElementById('next-btn').addEventListener('click', moveToNextQuestion);
+
+// function to move to next question
+
+function moveToNextQuestion() {
     if (questions.length > currentQuestionIndex +1) {
         currentQuestionIndex++;
         setNextQuestion(); 
     } else {
-        console.log("end");
         document.getElementById('next-btn').innerText = "END";
         setTimeout (() => {
         document.getElementById('game-play').classList.add('hide');
         document.getElementById('game-results').classList.remove('hide');
         }, 1000);
-    }
-});
+}};
 
 // function to capture name entered on home screen and display it on results screen
 
@@ -50,7 +48,6 @@ function captureUserName() {
 
 function startGame() {
     resetState();
-    console.log('started');
     document.getElementById('login-rules').classList.add('hide');
     document.getElementById('game-results').classList.add('hide');
     document.getElementById('game-play').classList.remove('hide');
@@ -108,14 +105,14 @@ function resetState() {
 }
 
 // function to  identify if answer is correct or incorrect
-//  and increment score if correct
+// and increment score if correct
+// and display a fact relevant to the question
 
-let oldScore = parseInt(document.getElementById("score").innerText);
+
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
     
-
     showFact(questions[currentQuestionIndex])
 
     Array.from(document.getElementById('button-box').children).forEach(button => {
@@ -123,6 +120,7 @@ function selectAnswer(e) {
         button.disabled = true;
         });
     if(correct) {
+        let oldScore = parseInt(document.getElementById("score").innerText);
         document.getElementById("score").innerText = ++oldScore;
         document.getElementById("final-score").innerText = ++finalScore;
         document.getElementById('final-number-of-qs').innerText = questions.length;
@@ -188,7 +186,7 @@ function playAgain() {
 document.getElementById('play-btn').addEventListener('click', playAgain);
 document.getElementById('home').addEventListener('click', goHome);
 
-});
+
 
 
 
