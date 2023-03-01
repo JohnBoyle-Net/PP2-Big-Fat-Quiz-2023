@@ -76,6 +76,7 @@ function displayNumberOfQuestions() {
 
 function showQuestion(question) {
     document.getElementById('question-box').innerText = question.question;
+    document.getElementById('question-box').style.fontSize = '28px'
     question.answer.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
@@ -92,6 +93,7 @@ function showQuestion(question) {
 
 function showFact(question) {
     document.getElementById('question-box').innerText = question.fact;
+    document.getElementById('question-box').style.fontSize = '20px'
 }
 
 // function to display questions 
