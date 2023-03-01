@@ -160,8 +160,15 @@ button:disabled {
     border: solid 2px black;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
+    justify-content: space-between;
+}
+
+.score-box p {
+    margin: 0 !important
 }
 
 /* results / end game screen elements */
@@ -323,8 +330,7 @@ input {
         
 #question-box {   
     width: 90%;
-    margin: auto;
-    font-size: 1.5rem;          
+    margin: auto;        
 }
         
 .answers {
@@ -337,9 +343,10 @@ input {
 }
 
 .score-box {
-    height: 30px;
-    width: 110px;
+    height: 50px;
+    width: 200px;
     font-size: 0.9rem;   
+    
 }
 
 #button-box {

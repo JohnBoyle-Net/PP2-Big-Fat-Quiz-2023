@@ -36,6 +36,7 @@ let currentQuestionIndex = '';
 function moveToNextQuestion() {
     if (questions.length > currentQuestionIndex +1) {
         currentQuestionIndex++;
+        showCurrentQuestionNumber();
         setNextQuestion(); 
     } else {
         document.getElementById('next-btn').innerText = 'END';
@@ -63,6 +64,7 @@ function startGame() {
     oldScore = 0;
     finalScore = 0;
     setNextQuestion();
+    
     document.getElementById('next-btn').innerText = 'NEXT';
 }
 
@@ -94,6 +96,13 @@ function showQuestion(question) {
 function showFact(question) {
     document.getElementById('question-box').innerText = question.fact;
     document.getElementById('question-box').style.fontSize = '20px'
+}
+
+//function to question number
+
+function showCurrentQuestionNumber() {
+    document.getElementById('q-number').innerText = currentQuestionIndex + 1;
+
 }
 
 // function to display questions 
