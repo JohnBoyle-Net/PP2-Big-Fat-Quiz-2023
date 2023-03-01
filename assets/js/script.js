@@ -1,127 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-// questions and answers arrays 
-
-const questions = [
-    {
-        question: 'Which country has the most Pyramids?',
-        answer: [
-            {text: 'Egypt', correct: false },
-            {text: 'Sudan', correct: true},
-            {text: 'Libya', correct: false},
-            {text: 'Israel', correct: false}
-        ],
-        fact: "There are 255 pyramids in Sudan, nearly twice as many as Egypt with 118.",
-    },
-    {
-        question: 'Which country has the highest waterfall?',
-        answer: [
-            {text: 'South Africa', correct: false },
-            {text: 'USA', correct: false},
-            {text: 'Venezuela', correct: true},
-            {text: 'Peru', correct: false}
-        ], 
-        fact: "Angel Falls in Venezuela is the world's tallest uninterrupted waterfall at a height of 979 metres."
-    },
-    {
-        question: 'Which country has the most official languages?',
-        answer: [
-            {text: 'Bolivia', correct: true },
-            {text: 'Zimbabwe', correct: false},
-            {text: 'Singapore', correct: false},
-            {text: 'South Africa', correct: false}
-        ],
-        fact: "Bolivia has 36 official languages. Around 70% of the population speak Bolivian Spanish which is also known as Castillan."
-    },
-    {
-        question: 'Which country has the most active volcanoes?',
-        answer: [
-            {text: 'Japan', correct: false},
-            {text: 'USA', correct: false},
-            {text: 'Indonesia', correct: true},
-            {text: 'Iceland', correct: false}
-        ], 
-        fact: "Indonesia has 58 recently active volcanoes due to it's position on the Pacific Ring of Fire."
-    },
-    {
-        question: "In which country is Europe's highest mountain",
-        answer: [
-            {text: 'Slovenia', correct: false },
-            {text: 'Russia', correct: true},
-            {text: 'Italy', correct: false},
-            {text: 'Switzerland', correct: false}
-        ],
-        fact: "Mount Ebrus is is the highest peak of the Caucasus Mountains standing at 5,642m."
-    },
-    {
-        question: "Which country is the smallest island nation in the world?",
-        answer: [
-            {text: 'Ireland', correct: false },
-            {text: 'Marshall Islands', correct: false},
-            {text: 'Nauru', correct: true},
-            {text: 'Malta', correct: false}
-        ],
-        fact: "Nauru is just 8.5 square miles and has has no official capital city."
-    },
-    {
-        question: "How many emirates make up the United Arab Emirates?",
-        answer: [
-            {text: '7', correct: true },
-            {text: '9', correct: false},
-            {text: '5', correct: false},
-            {text: '6', correct: false}
-        ],
-        fact: "The UAE is made up of Abu Dhabi, Dubai, Sharjah, Ajman, Umm Al-Quwain, Fujairah and Ras Al Khaimah."
-    },
-    {
-        question: "Which country boasts the worlds only underwater post office?",
-        answer: [
-            {text: 'Tuvalu', correct: false },
-            {text: 'Solomon Islands', correct: false},
-            {text: 'Kiribati', correct: false},
-            {text: 'Vanuatu', correct: true}
-        ],
-        fact: "This post office receives and delivers waterproof postcards embossed with special stamps."
-    },
-    {
-        question: "How long is the panama canal?",
-        answer: [
-            {text: '36km', correct: false},
-            {text: '124km', correct: false},
-            {text: '82km', correct: true},
-            {text: '45km', correct: false}
-        ],
-        fact: "The panama canal is an artificial waterway connecting the Atlantic Ocean with the Pacific Ocean.",
-    },
-    {
-        question: "Which country has the longest coastline?",
-        answer: [
-            {text: 'Canada', correct: true},
-            {text: 'Australia', correct: false},
-            {text: 'Norway', correct: false},
-            {text: 'USA', correct: false}
-        ],
-        fact: "Canada is the second largest country in the world with a coastline measures a whopping 243,042 km. "
-    },
-
-];
 
 
 
 
-const startButton = document.getElementById('start-btn');
-const quizRules = document.getElementById('login-rules');
-const playGameArea = document.getElementById('game-play');
-const questionBox = document.getElementById('question-box');
-const nextButton = document.getElementById('next-btn');
-const resultsArea = document.getElementById('game-results');
-const buttonBox = document.getElementById('button-box');
+
 let currentQuestionIndex = "";
 
 // event listener to start the quiz by loading quiz area (question and answers) and the score display
 // this checks if user has entered a name before letting them proceed
 
-startButton.addEventListener('click', verifyUser)
+document.getElementById('start-btn').addEventListener('click', verifyUser)
 
 function verifyUser(){
 if(document.getElementById('name').value === ""){
@@ -136,16 +25,16 @@ if(document.getElementById('name').value === ""){
 
 // event listener for Next button to load next question, unless there are no questions left user will go to results screen
 
-nextButton.addEventListener('click', () => {
+document.getElementById('next-btn').addEventListener('click', () => {
     if (questions.length > currentQuestionIndex +1) {
         currentQuestionIndex++;
         setNextQuestion(); 
     } else {
         console.log("end");
-        nextButton.innerText = "END";
+        document.getElementById('next-btn').innerText = "END";
         setTimeout (() => {
-        playGameArea.classList.add('hide');
-        resultsArea.classList.remove('hide');
+        document.getElementById('game-play').classList.add('hide');
+        document.getElementById('game-results').classList.remove('hide');
         }, 1000);
     }
 });
@@ -162,15 +51,15 @@ function captureUserName() {
 function startGame() {
     resetState();
     console.log('started');
-    quizRules.classList.add('hide');
-    resultsArea.classList.add('hide');
-    playGameArea.classList.remove('hide');
+    document.getElementById('login-rules').classList.add('hide');
+    document.getElementById('game-results').classList.add('hide');
+    document.getElementById('game-play').classList.remove('hide');
     displayNumberOfQuestions ();
     currentQuestionIndex = 0;
     oldScore = 0;
     finalScore = 0;
     setNextQuestion();
-    nextButton.innerText = "NEXT";
+    document.getElementById('next-btn').innerText = "NEXT";
 }
 
 // function to calculate and display total number of questions. Total will increase if more questions are added.
@@ -184,7 +73,7 @@ function displayNumberOfQuestions() {
 // function to build questions and answers from questions array
 
 function showQuestion(question) {
-    questionBox.innerText = question.question;
+    document.getElementById('question-box').innerText = question.question;
     question.answer.forEach(answer => {
         const button = document.createElement('button')   ;
         button.innerText = answer.text;
@@ -193,13 +82,13 @@ function showQuestion(question) {
             button.dataset.correct = answer.correct;
         }
         button.addEventListener('click', selectAnswer);
-        buttonBox.appendChild(button);
+        document.getElementById('button-box').appendChild(button);
         });
 }
 
 //function to show fact
 function showFact(question) {
-    questionBox.innerText = question.fact
+    document.getElementById('question-box').innerText = question.fact
 }
 
 // function to display questions 
@@ -212,6 +101,7 @@ function setNextQuestion() {
 // function to remove previous answers when user moves to new question
 
 function resetState() {
+    const buttonBox = document.getElementById('button-box');
     while (buttonBox.firstChild) {
         buttonBox.removeChild(buttonBox.firstChild);
     }
@@ -228,7 +118,7 @@ function selectAnswer(e) {
 
     showFact(questions[currentQuestionIndex])
 
-    Array.from(buttonBox.children).forEach(button => {
+    Array.from(document.getElementById('button-box').children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
         button.disabled = true;
         });
@@ -238,8 +128,8 @@ function selectAnswer(e) {
         document.getElementById('final-number-of-qs').innerText = questions.length;
         }
     if (questions.length < currentQuestionIndex + 1) {
-        playGameArea.classList.add('hide');
-        resultsArea.classList.remove('hide');
+        document.getElementById('game-play').classList.add('hide');
+        document.getElementById('game-results').classList.remove('hide');
         displayFinalScore();
     };
 }
@@ -273,32 +163,30 @@ function displayFinalScore() {
 // function to reset score when user finishes quiz and wants to replay
 
 function resetScore() {
-    oldScore = 0;
-    finalScore = 0;
-    document.getElementById("score").innerText = oldScore;
-    document.getElementById("final-score").innerText = finalScore;
+    document.getElementById("score").innerText = 0;
+    document.getElementById("final-score").innerText = 0;
 }
 
 // function to bring user back to login and rules screen
 
-let home = document.getElementById('home');
+
 function goHome() {
-    quizRules.classList.remove('hide');
-    playGameArea.classList.add('hide');
-    resultsArea.classList.add('hide');
+    document.getElementById('login-rules').classList.remove('hide');
+    document.getElementById('game-play').classList.add('hide');
+    document.getElementById('game-results').classList.add('hide');
     resetScore();
 }
 
 // function to bring user back to start of quiz
 
-let again = document.getElementById('play-btn');
+
 function playAgain() {
     resetScore();
     startGame();
 }
 
-again.addEventListener('click', playAgain);
-home.addEventListener('click', goHome);
+document.getElementById('play-btn').addEventListener('click', playAgain);
+document.getElementById('home').addEventListener('click', goHome);
 
 });
 
