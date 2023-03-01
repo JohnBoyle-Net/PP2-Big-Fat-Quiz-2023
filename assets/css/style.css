@@ -119,13 +119,11 @@ button:disabled {
 
 #button-box {
     max-height: 500px;
-    max-width: 80%;
     margin: 15px;
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin-top: 20px;
-    
     
 }
 
