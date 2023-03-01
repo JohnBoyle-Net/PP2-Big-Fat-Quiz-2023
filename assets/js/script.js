@@ -3,28 +3,33 @@ document.addEventListener('DOMContentLoaded', function() {
 // event listener to start the quiz by loading quiz area (question and answers) and the score display
 // this checks if user has entered a name before letting them proceed
 
-document.getElementById('start-btn').addEventListener('click', verifyUser)
+document.getElementById('start-btn').addEventListener('click', verifyUser);
+
+// event listener for bring user to start of quiz screen once they have completed the quiz
+
 document.getElementById('play-btn').addEventListener('click', playAgain);
+
+// event listener for bring user to home screen once they complete the quiz
+
 document.getElementById('home').addEventListener('click', goHome);
+
+// event listener for Next button to load next question, unless there are no questions left user will go to results screen
+
 document.getElementById('next-btn').addEventListener('click', moveToNextQuestion);
 
 function verifyUser(){
 if(document.getElementById('name').value === ''){
-    let error = 'Please enter a name'
+    let error = 'Please enter a name';
     alert(error);
  } else {
-    startGame()
-    captureUserName()
+    startGame();
+    captureUserName();
  }
 }
 
 });
 
 let currentQuestionIndex = '';
-
-// event listener for Next button to load next question, unless there are no questions left user will go to results screen
-
-
 
 // function to move to next question
 
@@ -38,14 +43,14 @@ function moveToNextQuestion() {
         document.getElementById('game-play').classList.add('hide');
         document.getElementById('game-results').classList.remove('hide');
         }, 1000);
-}};
+}}
 
 // function to capture name entered on home screen and display it on results screen
 
 function captureUserName() {
     let name = document.getElementById('name').value;
-    document.getElementById('username').innerText = name
-};
+    document.getElementById('username').innerText = name;
+}
 
 // function to start quiz when user clicks start button
 
@@ -59,23 +64,21 @@ function startGame() {
     oldScore = 0;
     finalScore = 0;
     setNextQuestion();
-    document.getElementById('next-btn').innerText = "NEXT";
+    document.getElementById('next-btn').innerText = 'NEXT';
 }
 
 // function to calculate and display total number of questions. Total will increase if more questions are added.
 
 function displayNumberOfQuestions() {
-    const NoOfQs = questions.length;
-    document.getElementById('number-of-qs').innerText = NoOfQs;
+    document.getElementById('number-of-qs').innerText = questions.length;
 }
-
 
 // function to build questions and answers from questions array
 
 function showQuestion(question) {
     document.getElementById('question-box').innerText = question.question;
     question.answer.forEach(answer => {
-        const button = document.createElement('button')   ;
+        const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('answers');
         if(answer.correct) {
@@ -87,8 +90,9 @@ function showQuestion(question) {
 }
 
 //function to show fact
+
 function showFact(question) {
-    document.getElementById('question-box').innerText = question.fact
+    document.getElementById('question-box').innerText = question.fact;
 }
 
 // function to display questions 
@@ -115,7 +119,7 @@ function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
     
-    showFact(questions[currentQuestionIndex])
+    showFact(questions[currentQuestionIndex]);
 
     Array.from(document.getElementById('button-box').children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
@@ -131,7 +135,7 @@ function selectAnswer(e) {
         document.getElementById('game-play').classList.add('hide');
         document.getElementById('game-results').classList.remove('hide');
         displayFinalScore();
-    };
+    }
 }
 
 // function to add class to buttons to identify correct answer for each question
@@ -169,7 +173,6 @@ function resetScore() {
 
 // function to bring user back to login and rules screen
 
-
 function goHome() {
     document.getElementById('login-rules').classList.remove('hide');
     document.getElementById('game-play').classList.add('hide');
@@ -179,15 +182,7 @@ function goHome() {
 
 // function to bring user back to start of quiz
 
-
 function playAgain() {
     resetScore();
     startGame();
 }
-
-
-
-
-
-
-
