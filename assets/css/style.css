@@ -330,7 +330,8 @@ input {
         
 #question-box {   
     width: 90%;
-    margin: auto;        
+    margin: auto; 
+    font-size: 1.3rem;       
 }
         
 .answers {

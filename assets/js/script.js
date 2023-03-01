@@ -78,7 +78,7 @@ function displayNumberOfQuestions() {
 
 function showQuestion(question) {
     document.getElementById('question-box').innerText = question.question;
-    document.getElementById('question-box').style.fontSize = '28px'
+    document.getElementById('question-box').style.fontSize = '26px'
     question.answer.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
@@ -95,10 +95,10 @@ function showQuestion(question) {
 
 function showFact(question) {
     document.getElementById('question-box').innerText = question.fact;
-    document.getElementById('question-box').style.fontSize = '20px'
+    document.getElementById('question-box').style.fontSize = '16px';
 }
 
-//function to question number
+//function to show current question number above score to show progress
 
 function showCurrentQuestionNumber() {
     document.getElementById('q-number').innerText = currentQuestionIndex + 1;
