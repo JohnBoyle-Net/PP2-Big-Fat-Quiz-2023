@@ -1,13 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
 
 // event listener to start the quiz by loading quiz area (question and answers) and the score display
 // this checks if user has entered a name before letting them proceed
 
 document.getElementById('start-btn').addEventListener('click', verifyUser)
+document.getElementById('play-btn').addEventListener('click', playAgain);
+document.getElementById('home').addEventListener('click', goHome);
+document.getElementById('next-btn').addEventListener('click', moveToNextQuestion);
 
 function verifyUser(){
-if(document.getElementById('name').value === ""){
-    let error = "Please enter a name"
+if(document.getElementById('name').value === ''){
+    let error = 'Please enter a name'
     alert(error);
  } else {
     startGame()
@@ -17,11 +20,11 @@ if(document.getElementById('name').value === ""){
 
 });
 
-let currentQuestionIndex = "";
+let currentQuestionIndex = '';
 
 // event listener for Next button to load next question, unless there are no questions left user will go to results screen
 
-document.getElementById('next-btn').addEventListener('click', moveToNextQuestion);
+
 
 // function to move to next question
 
@@ -30,7 +33,7 @@ function moveToNextQuestion() {
         currentQuestionIndex++;
         setNextQuestion(); 
     } else {
-        document.getElementById('next-btn').innerText = "END";
+        document.getElementById('next-btn').innerText = 'END';
         setTimeout (() => {
         document.getElementById('game-play').classList.add('hide');
         document.getElementById('game-results').classList.remove('hide');
@@ -108,7 +111,6 @@ function resetState() {
 // and increment score if correct
 // and display a fact relevant to the question
 
-
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
@@ -120,9 +122,9 @@ function selectAnswer(e) {
         button.disabled = true;
         });
     if(correct) {
-        let oldScore = parseInt(document.getElementById("score").innerText);
-        document.getElementById("score").innerText = ++oldScore;
-        document.getElementById("final-score").innerText = ++finalScore;
+        let oldScore = parseInt(document.getElementById('score').innerText);
+        document.getElementById('score').innerText = ++oldScore;
+        document.getElementById('final-score').innerText = ++finalScore;
         document.getElementById('final-number-of-qs').innerText = questions.length;
         }
     if (questions.length < currentQuestionIndex + 1) {
@@ -153,16 +155,16 @@ function clearStatusClass(element) {
 
 // function to display final score on results screen
 
-let finalScore = parseInt(document.getElementById("final-score").innerText);
+let finalScore = parseInt(document.getElementById('final-score').innerText);
 function displayFinalScore() {
-    document.getElementById("final-score").innerText = ++finalScore;
+    document.getElementById('final-score').innerText = ++finalScore;
 }
 
 // function to reset score when user finishes quiz and wants to replay
 
 function resetScore() {
-    document.getElementById("score").innerText = 0;
-    document.getElementById("final-score").innerText = 0;
+    document.getElementById('score').innerText = 0;
+    document.getElementById('final-score').innerText = 0;
 }
 
 // function to bring user back to login and rules screen
@@ -183,8 +185,7 @@ function playAgain() {
     startGame();
 }
 
-document.getElementById('play-btn').addEventListener('click', playAgain);
-document.getElementById('home').addEventListener('click', goHome);
+
 
 
 
