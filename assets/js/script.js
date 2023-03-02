@@ -44,6 +44,7 @@ function moveToNextQuestion() {
         document.getElementById('game-play').classList.add('hide');
         document.getElementById('game-results').classList.remove('hide');
         }, 1000);
+        
 }}
 
 // function to capture name entered on home screen and display it on results screen
@@ -169,16 +170,33 @@ function clearStatusClass(element) {
 
 // function to display final score on results screen
 
-let finalScore = parseInt(document.getElementById('final-score').innerText);
+
 function displayFinalScore() {
+    let finalScore = parseInt(document.getElementById('final-score').innerText);
     document.getElementById('final-score').innerText = ++finalScore;
+
+    let msg = document.getElementById('message').innerText
+    if (finalScore < 3) {
+        msg = "Hopefully you learned something today";
+    } else if (finalScore <= 5) {
+        msg = "Not bad but better luck next time"
+    } else if (finalScore <= 8) {
+        msg = "You know your geography"
+    } else if (finalScore = questions.length) {
+        msg = "Wow. Maybe you should be a teacher"
+    } else {
+        msg = "There seems to be a problem with the score"
+    }
 }
+
+
 
 // function to reset score when user finishes quiz and wants to replay
 
 function resetScore() {
     document.getElementById('score').innerText = 0;
     document.getElementById('final-score').innerText = 0;
+    document.getElementById('q-number').innerText = 1
 }
 
 // function to bring user back to login and rules screen
