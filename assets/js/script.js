@@ -172,10 +172,10 @@ function clearStatusClass(element) {
 
 // function to display final score on results screen
 
-
 function displayFinalScore() {
     let finalScore = parseInt(document.getElementById('final-score').innerText);
     document.getElementById('final-score').innerText = finalScore;
+    
     if (finalScore < 3) {
         document.getElementById('message').innerText = "Hopefully you learned something today";
     } else if (finalScore <= 5) {
@@ -188,8 +188,6 @@ function displayFinalScore() {
         document.getElementById('message').innerText = "There seems to be a problem with the score"
     }
 }
-
-
 
 // function to reset score when user finishes quiz and wants to replay
 
