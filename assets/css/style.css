@@ -243,6 +243,16 @@ footer {
     justify-content: space-evenly;
 }
 
+.error {
+    height: 700px;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px
+}
+
 
 @media only screen and (max-width: 1300px) {
 
