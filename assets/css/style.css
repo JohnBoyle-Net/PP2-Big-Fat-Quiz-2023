@@ -265,6 +265,33 @@ footer {
     font-size: larger;
 }
 
+.jiggle {
+    animation: jiggle 0.2s infinite;
+    animation-duration: 0.2s;
+    animation-name: jiggle;
+    animation-iteration-count: infinite;
+    transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+@keyframes jiggle {
+    0% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+}
+
+@keyframes jiggle {
+    0% {
+        transform: rotate(-1deg);
+        }
+    50% {
+        transform: rotate(1deg);
+    }
+}
+
 
 @media only screen and (max-width: 1300px) {
 

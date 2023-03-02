@@ -91,6 +91,7 @@ function showQuestion(question) {
         button.addEventListener('click', selectAnswer);
         document.getElementById('button-box').appendChild(button);
         });
+        document.getElementById('next-btn').classList.remove('jiggle')
 }
 
 //function to show fact
@@ -112,6 +113,7 @@ function showCurrentQuestionNumber() {
 function setNextQuestion() {
     resetState();
     showQuestion(questions[currentQuestionIndex]);
+    document.getElementById('next-btn').classList.remove('jiggle')
 }
 
 // function to remove previous answers when user moves to new question
@@ -121,12 +123,13 @@ function resetState() {
     while (buttonBox.firstChild) {
         buttonBox.removeChild(buttonBox.firstChild);
     }
+    clearTimeout(timeoutId); 
 }
 
 // function to  identify if answer is correct or incorrect
 // and increment score if correct
 // and display a fact relevant to the question
-
+let timeoutId = ''
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
@@ -136,20 +139,27 @@ function selectAnswer(e) {
     Array.from(document.getElementById('button-box').children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
         button.disabled = true;
+        
         });
+    timeoutId = setTimeout (() => {
+            document.getElementById('next-btn').classList.add('jiggle');
+            }, 4000);  
     if(correct) {
         let oldScore = parseInt(document.getElementById('score').innerText);
         document.getElementById('score').innerText = ++oldScore;
         document.getElementById('final-score').innerText = ++finalScore;
         document.getElementById('final-number-of-qs').innerText = questions.length;
-        
         }
     if (questions.length < currentQuestionIndex + 1) {
         document.getElementById('game-play').classList.add('hide');
         document.getElementById('game-results').classList.remove('hide');
-        
     }
+
 }
+
+
+ 
+
 
 // function to add class to buttons to identify correct answer for each question
 
@@ -159,7 +169,7 @@ function setStatusClass(element, correct) {
         element.classList.add('correct'); 
     } else {
         element.classList.add('incorrect');
-    }   
+    }  
 }
 
 // function to remove class added to identify correct answer for each question
