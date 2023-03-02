@@ -47,23 +47,33 @@ in a fun way. This website is one page which updates based on the user interacti
 
     - The user lands on the home screen which includes the title along with an area to display the rules/how to play, an input field where the user enters their name and a start button to begin the quiz.
     The design is simple with a sky background in line with the quiz relating to the world. All elements include the shadow to make the elements stick out on the page.
+    ![image](https://user-images.githubusercontent.com/119696542/222521631-97a4d752-079d-45ca-843b-52e2646bf6e0.png)
+
+    - The user will be alerted to enter their name if they try to start without first entering their name in the input field.
+    ![image](https://user-images.githubusercontent.com/119696542/222521738-ea938d08-b4aa-47b5-947c-d67f18d82d8e.png)
+
     
 - __F03 Quiz screen__
     
-    - When the user clicks on the start button on the home screen, the game screen will appear. The quiz screen has 4 elements - the score, the question, the 4 possible answers and a button to move to the next question. These elements have been styled in line with the home screen to maintain the overall design. 
-    The buttons will change color when the user clicks an answer - the correct answer will be green and the incorrect answers will be red. This helps the user to learn as they play the quiz as they can see what the correct answer is.
+    - When the user clicks on the start button on the home screen, the game screen will appear. The quiz screen has 4 elements - the question number and current score, the question, the 4 possible answers and a button to move to the next question. These elements have been styled in line with the home screen to maintain the overall design. 
+    ![image](https://user-images.githubusercontent.com/119696542/222513714-34f7e226-d17e-4397-aad0-eaf8d1faf474.png)
+
+    - When the user clicks an answer the buttons will change color and a relevant fact will replace the question  - the correct answer will be green and the incorrect answers will be red. This helps the user to learn as they play the quiz as they can see what the correct answer is.
     The score will increase if the customer gets the answer correct.
-    The user is unable to select an answer again and must move to the next question.
-    When the user has answered the final question, the next button changes to "END" and the results screen is automatically displayed
+    ![image](https://user-images.githubusercontent.com/119696542/222514242-1078d393-a002-4081-88ce-e388ec485c36.png)
+
+    - The user is unable to select an answer again and must move to the next question. The NEXT button will start to jiggle after 4 seconds to indicate to the user to move on to the next question
+    
+    https://user-images.githubusercontent.com/119696542/222521937-7990f061-dfa2-471b-a216-c3219b538e0a.mp4
+
+    - When the user has answered the final question, the next button changes to "END" and the results screen is automatically displayed
     
 - __F04 Results screen__
     
-    - The results screen includes an area to display the final score and a message to the user which includes the name they entered on the home screen.
+    - The results screen includes an area to display the final score and a message to the user which includes the name they entered on the home screen. The message displayed will vary depending on the final score.
     There is also a play again button which will bring you back to question 1 or a home button which brings the user back to the home screen.
-    
-- __F05 Footer__
+    ![image](https://user-images.githubusercontent.com/119696542/222516595-5fd378de-603c-4760-8f4c-d3bc2f657c41.png)
 
-    - The footer is featured on all pages and is identical on each page making it easy to use.  It contains two sections :
 
 ## Design
 
