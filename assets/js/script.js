@@ -27,6 +27,9 @@ if(document.getElementById('name').value === ''){
  }
 }
 
+$(document).ready(function(){
+    document.login.input.focus();
+    });
 });
 
 let currentQuestionIndex = '';
