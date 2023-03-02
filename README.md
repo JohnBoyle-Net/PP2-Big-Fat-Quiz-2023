@@ -83,11 +83,14 @@ in a fun way. This website is one page which updates based on the user interacti
 
 -   ### Wireframes
 
-    -   #### Home Screen Wireframes
+#### Home Screen Wireframes
+![image](https://user-images.githubusercontent.com/119696542/222509604-c3f30d2e-2e80-42de-ac97-2467344fa70c.png)
 
-    -   #### Quiz Screen Wireframes
+#### Quiz Screen Wireframes
+![image](https://user-images.githubusercontent.com/119696542/222509692-30f78732-8970-4871-b743-d39de55aef9d.png)
 
-    -   #### Results Screen Wireframes
+#### Results Screen Wireframes
+![image](https://user-images.githubusercontent.com/119696542/222507708-55b0a8c0-d66d-407b-8f43-f4937334da50.png)
 
 ## Technologies Used
 
