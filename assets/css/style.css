@@ -49,8 +49,19 @@ margin-bottom: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-    
+    justify-content: center; 
+}
+
+.rules h1 {
+    margin-bottom: 0 !important;
+}
+
+.green {
+    color: green
+}
+
+.red {
+    color: red
 }
 
 input {
@@ -63,6 +74,8 @@ input {
     font-size: 1.5em;
     text-align: center;
 }
+
+
 
 /* button elements */
 
@@ -283,7 +296,7 @@ footer {
 
 .rules h1 {
     font-size: 1.2rem;
-    
+    margin-bottom: 0 !important;
 }
 
 .rules ol {
