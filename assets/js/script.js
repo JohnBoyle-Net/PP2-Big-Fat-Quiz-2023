@@ -43,6 +43,7 @@ function moveToNextQuestion() {
         setTimeout (() => {
         document.getElementById('game-play').classList.add('hide');
         document.getElementById('game-results').classList.remove('hide');
+        displayFinalScore();
         }, 1000);
         
 }}
@@ -141,11 +142,12 @@ function selectAnswer(e) {
         document.getElementById('score').innerText = ++oldScore;
         document.getElementById('final-score').innerText = ++finalScore;
         document.getElementById('final-number-of-qs').innerText = questions.length;
+        
         }
     if (questions.length < currentQuestionIndex + 1) {
         document.getElementById('game-play').classList.add('hide');
         document.getElementById('game-results').classList.remove('hide');
-        displayFinalScore();
+        
     }
 }
 
@@ -173,19 +175,17 @@ function clearStatusClass(element) {
 
 function displayFinalScore() {
     let finalScore = parseInt(document.getElementById('final-score').innerText);
-    document.getElementById('final-score').innerText = ++finalScore;
-
-    let msg = document.getElementById('message').innerText
+    document.getElementById('final-score').innerText = finalScore;
     if (finalScore < 3) {
-        msg = "Hopefully you learned something today";
+        document.getElementById('message').innerText = "Hopefully you learned something today";
     } else if (finalScore <= 5) {
-        msg = "Not bad but better luck next time"
+        document.getElementById('message').innerText = "Not bad but better luck next time"
     } else if (finalScore <= 8) {
-        msg = "You know your geography"
+        document.getElementById('message').innerText = "You know your geography"
     } else if (finalScore = questions.length) {
-        msg = "Wow. Maybe you should be a teacher"
+        document.getElementById('message').innerText = "Wow. Maybe you should be a teacher"
     } else {
-        msg = "There seems to be a problem with the score"
+        document.getElementById('message').innerText = "There seems to be a problem with the score"
     }
 }
 
