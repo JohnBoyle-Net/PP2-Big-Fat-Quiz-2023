@@ -49,7 +49,7 @@ in a fun way. This website is one page which updates based on the user interacti
     The design is simple with a sky background in line with the quiz relating to the world. All elements include the shadow to make the elements stick out on the page.
     ![image](https://user-images.githubusercontent.com/119696542/222521631-97a4d752-079d-45ca-843b-52e2646bf6e0.png)
 
-    - The user will be alerted to enter their name if they try to start without first entering their name in the input field.
+    - The cursor is automatically loaded in the input field to enable user to enter their name with minimal touch. The user will be alerted to enter their name if they try to start without first entering their name in the input field.
     ![image](https://user-images.githubusercontent.com/119696542/222521738-ea938d08-b4aa-47b5-947c-d67f18d82d8e.png)
 
     
