@@ -50,7 +50,7 @@ function moveToNextQuestion() {
 // function to capture name entered on home screen and display it on results screen
 
 function captureUserName() {
-    document.getElementById('username').innerText = document.getElementById('name').value;;
+    document.getElementById('username').innerText = document.getElementById('name').value;
 }
 
 // function to start quiz when user clicks start button
@@ -79,7 +79,7 @@ function displayNumberOfQuestions() {
 
 function showQuestion(question) {
     document.getElementById('question-box').innerText = question.question;
-    document.getElementById('question-box').style.fontSize = '26px'
+    document.getElementById('question-box').style.fontSize = '26px';
 
     question.answer.forEach(answer => {
         const button = document.createElement('button');
@@ -92,7 +92,7 @@ function showQuestion(question) {
         document.getElementById('button-box').appendChild(button);
         });
 
-    document.getElementById('next-btn').classList.remove('jiggle')
+    document.getElementById('next-btn').classList.remove('jiggle');
 }
 
 //function to show fact
@@ -113,7 +113,7 @@ function showCurrentQuestionNumber() {
 function setNextQuestion() {
     resetState();
     showQuestion(questions[currentQuestionIndex]);
-    document.getElementById('next-btn').classList.remove('jiggle')
+    document.getElementById('next-btn').classList.remove('jiggle');
 }
 
 // function to remove previous answers when user moves to new question
@@ -132,7 +132,7 @@ function resetState() {
 // and makes Next button jiggle 4 seconds after user selects an answer if they haven't clicked Next yet
 // Some of below code was researched for how to identify selected button and apply correct or incorrect status on Web Dev Simplified youtube video (see Readme)
 
-let timeoutId = ''
+let timeoutId = '';
 
 function selectAnswer(e) {
     const selectedButton = e.target;
@@ -185,13 +185,13 @@ function displayFinalScore() {
     if (finalScore < 3) {
         document.getElementById('message').innerText = "Hopefully you learned something today";
     } else if (finalScore <= 5) {
-        document.getElementById('message').innerText = "Not bad but better luck next time"
+        document.getElementById('message').innerText = "Not bad but better luck next time";
     } else if (finalScore <= 8) {
-        document.getElementById('message').innerText = "You know your geography"
-    } else if (finalScore = questions.length) {
-        document.getElementById('message').innerText = "Wow. Maybe you should be a teacher"
+        document.getElementById('message').innerText = "You know your geography";
+    } else if (finalScore == questions.length) {
+        document.getElementById('message').innerText = "Wow. Maybe you should be a teacher";
     } else {
-        document.getElementById('message').innerText = "There seems to be a problem with the score"
+        document.getElementById('message').innerText = "There seems to be a problem with the score";
     }
 }
 
@@ -200,7 +200,7 @@ function displayFinalScore() {
 function resetScore() {
     document.getElementById('score').innerText = 0;
     document.getElementById('final-score').innerText = 0;
-    document.getElementById('q-number').innerText = 1
+    document.getElementById('q-number').innerText = 1;
 }
 
 // function to bring user back to login and rules screen
