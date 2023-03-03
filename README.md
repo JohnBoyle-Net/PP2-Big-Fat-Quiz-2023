@@ -126,7 +126,31 @@ in a fun way. This website is one page which updates based on the user interacti
     
 ## Testing
 
+### Manual Test Cases and Results
 
+- The below tables detail the test cases that were used, the results and a cross-reference to the Feature ID that each test case exer
+
+![image](https://user-images.githubusercontent.com/119696542/222733078-640c11ab-1d33-4145-b19d-4b0deb222fd8.png)
+
+![image](https://user-images.githubusercontent.com/119696542/222733235-46ba4980-4c8d-40d2-af0f-e6a2033d6bda.png)
+
+- Testing has been carried out on the following browsers :
+
+    - Chrome Version 110.0.5481.178 (Official Build) (64-bit)
+    - Firefox Version Version 110.0.1 (64-bit)
+    - Edge Version 110.0.1587.57 (Official build) (64-bit)
+
+ ### Automated Validator Testing
+
+- [HTML Validator](https://validator.w3.org/)
+
+- result for index.html
+
+![image](https://user-images.githubusercontent.com/119696542/222734653-86205292-5ca3-4e59-bb06-36b4d87d91be.png)
+
+- result for 404.html
+
+![image](https://user-images.githubusercontent.com/119696542/222734810-f14475c0-927e-4067-a86c-dde2281c2d00.png)
 
 
 ## Deployment
