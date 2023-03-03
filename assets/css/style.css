@@ -403,8 +403,8 @@ button:disabled {
     }      
 
     #question-box {  
-        font-size: 30px !important;  
-        width: 80vw !important;   
+        font-size: 26px;  
+  
     }
 }
 
@@ -421,7 +421,15 @@ button:disabled {
     }  
 
     #question-box {  
-        font-size: 28px !important;  
         width: 90vw !important;   
+    }
+
+    .score-display {
+
+        font-size: 1.4rem;
+    }
+
+    .fact {
+        font-size: 20px !important;
     }
 }

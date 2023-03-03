@@ -99,7 +99,8 @@ function showQuestion(question) {
 
 function showFact(question) {
     document.getElementById('question-box').innerText = question.fact;
-    document.getElementById('question-box').style.fontSize = '20px';
+    document.getElementById('question-box').style.fontSize = '26px';
+    document.getElementById('question-box').classList.add('fact');
 }
 
 //function to show current question number above score to show progress
@@ -114,6 +115,7 @@ function setNextQuestion() {
     resetState();
     showQuestion(questions[currentQuestionIndex]);
     document.getElementById('next-btn').classList.remove('jiggle');
+    document.getElementById('question-box').classList.remove('fact')
 }
 
 // function to remove previous answers when user moves to new question
