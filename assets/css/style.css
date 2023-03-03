@@ -20,6 +20,12 @@ body {
     text-shadow: 1px 1px 5px black, 0 0 30px black, 0 0 20px black;
 }
 
+.heading a {
+    text-decoration: none;
+    color: white;
+
+}
+
 
 /* login and rules screen elements */
 
