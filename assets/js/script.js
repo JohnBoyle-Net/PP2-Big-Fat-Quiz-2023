@@ -18,13 +18,13 @@ document.getElementById('home').addEventListener('click', goHome);
 document.getElementById('next-btn').addEventListener('click', moveToNextQuestion);
 
 function verifyUser(){
-if(document.getElementById('name').value === ''){
+    if(document.getElementById('name').value === ''){
     let error = 'Please enter a name';
     alert(error);
- } else {
+    } else {
     startGame();
     captureUserName();
- }
+    }
 }
 
 });
@@ -45,8 +45,8 @@ function moveToNextQuestion() {
         document.getElementById('game-results').classList.remove('hide');
         displayFinalScore();
         }, 1000);
-        
-}}
+    }
+}
 
 // function to capture name entered on home screen and display it on results screen
 
@@ -66,7 +66,6 @@ function startGame() {
     oldScore = 0;
     finalScore = 0;
     setNextQuestion();
-    
     document.getElementById('next-btn').innerText = 'NEXT';
 }
 
@@ -76,7 +75,8 @@ function displayNumberOfQuestions() {
     document.getElementById('number-of-qs').innerText = questions.length;
 }
 
-// function to build questions and answers from questions array
+// function to display question and build and display answer buttons from questions array
+// Some of below code was researched for how to create, populate and assign class to buttons on Web Dev Simplified youtube video (see Readme)
 
 function showQuestion(question) {
     document.getElementById('question-box').innerText = question.question;
@@ -105,7 +105,6 @@ function showFact(question) {
 
 function showCurrentQuestionNumber() {
     document.getElementById('q-number').innerText = currentQuestionIndex + 1;
-
 }
 
 // function to display questions 
@@ -126,10 +125,14 @@ function resetState() {
     clearTimeout(timeoutId); 
 }
 
-// function to  identify if answer is correct or incorrect
+// function to determine selected answer and functon added to assign correct or incorrect class (setStatusClass)
 // and increment score if correct
-// and display a fact relevant to the question
+// and display a fact relevant to the question (function showFact)
+// and makes Next button jiggle 4 seconds after user selects an answer if they haven't clicked Next yet
+// Some of below code was researched for how to identify selected button and apply correct or incorrect status on Web Dev Simplified youtube video (see Readme)
+
 let timeoutId = ''
+
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
@@ -139,7 +142,6 @@ function selectAnswer(e) {
     Array.from(document.getElementById('button-box').children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
         button.disabled = true;
-        
         });
     timeoutId = setTimeout (() => {
             document.getElementById('next-btn').classList.add('jiggle');
@@ -154,12 +156,7 @@ function selectAnswer(e) {
         document.getElementById('game-play').classList.add('hide');
         document.getElementById('game-results').classList.remove('hide');
     }
-
 }
-
-
- 
-
 
 // function to add class to buttons to identify correct answer for each question
 
@@ -177,15 +174,13 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('incorrect');
-
 }
 
-// function to display final score on results screen
+// function to display final score and final message on results screen
 
 function displayFinalScore() {
     let finalScore = parseInt(document.getElementById('final-score').innerText);
     document.getElementById('final-score').innerText = finalScore;
-    
     if (finalScore < 3) {
         document.getElementById('message').innerText = "Hopefully you learned something today";
     } else if (finalScore <= 5) {

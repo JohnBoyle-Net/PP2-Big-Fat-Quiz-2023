@@ -14,12 +14,10 @@
     <title>The World Quiz</title>
 </head>
 <body>
+<!-- Logo title --> 
     <header>
         <h1 class="heading"><a href="index.html"><i class="fa-sharp fa-solid fa-earth-americas"></i> The World Quiz <i class="fa-sharp fa-solid fa-earth-americas"></i></a></h1>
     </header>
-
-
-
 <!-- Login and rules panel display -->   
     <div id="login-rules">
         <div class="rules">
@@ -31,23 +29,21 @@
                 <li>Keep an eye out for interesting facts throughout the quiz</li>
             </ol>
         </div>
-        
-        <input type="text" id="name" placeholder="Enter your name here" autofocus >
+        <input type="text" id="name" placeholder="Enter your name here" autofocus>
         <button id="start-btn" class="btn">START</button>
     </div>
 <!-- Game play panel display -->   
     <div id="game-play" class="hide">
-            <div class="score-box" >
-                <p>Question # <span id="q-number">1</span></p>
-                    <p>Score <span id="score">0</span>/<span id="number-of-qs">0</span></p>
-            </div>
-            <div id="question-box">Question</div>
-            <div id="button-box">
-
-            </div>
-            <button id="next-btn" class="btn">NEXT</button>
+        <div class="score-box" >
+            <p>Question # <span id="q-number">1</span></p>
+            <p>Score <span id="score">0</span>/<span id="number-of-qs">0</span></p>
+        </div>
+        <div id="question-box">Question</div>
+        <div id="button-box">
+            <!-- JavaScript creates buttons within this div --> 
+        </div>
+        <button id="next-btn" class="btn">NEXT</button>
     </div>
-    
 <!-- End game / Results panel display -->   
     <div id="game-results" class="hide">
         <div class="score-display">
@@ -58,7 +54,7 @@
         <button id="play-btn" class="btn">PLAY AGAIN</button>
         <button id="home" class="btn">GO HOME</button>
     </div>
-
+    <!-- Font Awesome script for world icons --> 
     <script src="https://kit.fontawesome.com/70893e8ef4.js" crossorigin="anonymous"></script>
     <script src="assets/js/data.js"></script>
     <script src="assets/js/script.js"></script>
