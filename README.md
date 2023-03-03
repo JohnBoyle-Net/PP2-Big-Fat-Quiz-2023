@@ -79,8 +79,8 @@ in a fun way. This website is one page which updates based on the user interacti
 
 ## Design
 
--   ### Title
-    -   Title info here
+-   ### Title/Logo
+    -   The title logo uses Lilita One font from Google Fonts. This was chosen to give a fun feel to the game.
     -   World icons were used on either side of the title which were taken from Font Awesome
     
     ![image](https://user-images.githubusercontent.com/119696542/221643736-1f9bbe47-5621-4713-a9a4-168b70392e64.png)
@@ -146,17 +146,36 @@ in a fun way. This website is one page which updates based on the user interacti
 
 - [HTML Validator](https://validator.w3.org/)
 
-- result for index.html
+    - result for index.html
 
-![image](https://user-images.githubusercontent.com/119696542/222734653-86205292-5ca3-4e59-bb06-36b4d87d91be.png)
+    ![image](https://user-images.githubusercontent.com/119696542/222734653-86205292-5ca3-4e59-bb06-36b4d87d91be.png)
 
-- result for 404.html
+    - result for 404.html
 
-![image](https://user-images.githubusercontent.com/119696542/222734810-f14475c0-927e-4067-a86c-dde2281c2d00.png)
+    ![image](https://user-images.githubusercontent.com/119696542/222734810-f14475c0-927e-4067-a86c-dde2281c2d00.png)
 
  - [CSS Validator](https://jigsaw.w3.org/css-validator/)
 
-![image](https://user-images.githubusercontent.com/119696542/222750348-175d9e3b-c452-4bec-b56f-fdf2377a57b2.png)
+    ![image](https://user-images.githubusercontent.com/119696542/222750348-175d9e3b-c452-4bec-b56f-fdf2377a57b2.png)
+
+- [JSHint Validator](https://jshint.com/)
+
+    - script.js
+- Missing semicolons flagged have been put in place and now no errors are reported
+- The undefined questions variable are defined in the data.js file.
+- The undefined oldScore and finalScore variables are used to reset and increment score.
+
+    ![image](https://user-images.githubusercontent.com/119696542/222754721-d10796fd-eae8-4db5-a56f-1d96963f8939.png)
+
+    - data.js
+- The unused variable is used in the data.js file
+
+    ![image](https://user-images.githubusercontent.com/119696542/222756524-279a6e1f-13ca-4fdb-883f-47b060d5b555.png)
+
+
+- [PageSpeed Insights](https://pagespeed.web.dev/)
+
+![image](https://user-images.githubusercontent.com/119696542/222753491-8d7a6c44-7694-459d-8ede-48b5e290ab81.png)
 
 
 ## Deployment
