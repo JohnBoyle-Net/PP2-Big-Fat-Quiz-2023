@@ -39,7 +39,7 @@ body {
 
 .rules {
     background-color: white;
-    height: 300px;
+    height: auto;
     width: 600px;
     border: solid 1px black;
     text-align: center;
@@ -111,7 +111,8 @@ button:disabled {
 
 #question-box {
     background-color: white;
-    height: 150px;
+    height: auto;
+    min-height: 150px;
     width: 60%;
     display: flex;
     justify-content: center;
@@ -161,7 +162,6 @@ button:disabled {
     background-color: white;
     height: 50px;
     width: 200px;
-    margin: 10px;
     border: solid 2px black;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px;
@@ -202,6 +202,8 @@ button:disabled {
     margin-bottom: 30px;
     border-radius: 15%;
     box-shadow: 0 0 10px 5px;
+    text-align: center;
+    font-size: 1.6rem;
 }
 
 .hide {
@@ -399,6 +401,11 @@ button:disabled {
     .rules ol li {
         font-size: 1rem;
     }      
+
+    #question-box {  
+        font-size: 30px !important;  
+        width: 80vw !important;   
+    }
 }
 
 /* For very small screens sizes from 320px wide and down */
