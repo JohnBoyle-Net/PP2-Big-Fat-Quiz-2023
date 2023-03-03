@@ -124,4 +124,34 @@ in a fun way. This website is one page which updates based on the user interacti
 -   [Photopea:](https://www.photopea.com/) was used to remove white background from favicon icon.
 -   Chrome dev tools to troubleshoot, test and check responsiveness of features.
     
-### Testing
+## Testing
+
+
+
+
+## Deployment
+
+### How this site was deployed
+
+- Login to Github
+- Click on the GitHub repository for this project (https://louibens.github.io/PP2-The-World-Quiz/)
+- Click on the Settings tab, then choose Pages from the left hand menu 
+- From the source section drop-down menu, select the Main Branch
+- Once the main branch has been selected, click save.
+- The page will refresh with a notification that” Your site is live”
+- Any changes pushed to the master branch will take effect on the live project
+
+  The live link can be found here - [The World Quiz](https://louibens.github.io/PP2-The-World-Quiz/) 
+  
+### How to clone the repository
+
+- Go to the https://louibens.github.io/PP2-The-World-Quiz/ repository on GitHub 
+- Click the "Fork" button in the top right corner
+
+### How to clone the repository
+
+- Go to the https://louibens.github.io/PP2-The-World-Quiz/ repository on GitHub 
+- Click the "Code" button to the right of the screen, click HTTPs and copy the link there
+- Open a GitBash terminal and navigate to the directory where you want to locate the clone
+- On the command line, type "git clone" then paste in the copied url and press the Enter key to begin the clone process
+
