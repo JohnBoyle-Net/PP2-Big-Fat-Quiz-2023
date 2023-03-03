@@ -79,7 +79,6 @@ function displayNumberOfQuestions() {
 
 function showQuestion(question) {
     document.getElementById('question-box').innerText = question.question;
-    document.getElementById('question-box').style.fontSize = '32px';
 
     question.answer.forEach(answer => {
         const button = document.createElement('button');
@@ -99,7 +98,6 @@ function showQuestion(question) {
 
 function showFact(question) {
     document.getElementById('question-box').innerText = question.fact;
-    document.getElementById('question-box').style.fontSize = '26px';
     document.getElementById('question-box').classList.add('fact');
 }
 
@@ -188,7 +186,7 @@ function displayFinalScore() {
         document.getElementById('message').innerText = "Hopefully you learned something today";
     } else if (finalScore <= 5) {
         document.getElementById('message').innerText = "Not bad but better luck next time";
-    } else if (finalScore <= 8) {
+    } else if (finalScore <= 9) {
         document.getElementById('message').innerText = "You know your geography";
     } else if (finalScore == questions.length) {
         document.getElementById('message').innerText = "Wow. Maybe you should be a teacher";

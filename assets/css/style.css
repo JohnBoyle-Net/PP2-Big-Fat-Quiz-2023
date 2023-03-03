@@ -121,6 +121,7 @@ button:disabled {
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px;
+    font-size: 32px;
 }
 
 #button-box {
@@ -405,6 +406,10 @@ button:disabled {
     #question-box {  
         font-size: 26px;  
   
+    }
+
+    .fact {
+        font-size: 20px !important;
     }
 }
 
