@@ -19,8 +19,7 @@ document.getElementById('next-btn').addEventListener('click', moveToNextQuestion
 
 function verifyUser(){
     if(document.getElementById('name').value === ''){
-    let error = 'Please enter a name';
-    alert(error);
+    alert('Please enter a name');
     } else {
     startGame();
     captureUserName();
@@ -92,7 +91,7 @@ function showQuestion(question) {
         button.addEventListener('click', selectAnswer);
         document.getElementById('button-box').appendChild(button);
         });
-        
+
     document.getElementById('next-btn').classList.remove('jiggle')
 }
 
