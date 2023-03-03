@@ -154,6 +154,10 @@ in a fun way. This website is one page which updates based on the user interacti
 
 ![image](https://user-images.githubusercontent.com/119696542/222734810-f14475c0-927e-4067-a86c-dde2281c2d00.png)
 
+ - [CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+![image](https://user-images.githubusercontent.com/119696542/222750348-175d9e3b-c452-4bec-b56f-fdf2377a57b2.png)
+
 
 ## Deployment
 
