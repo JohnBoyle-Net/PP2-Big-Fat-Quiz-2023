@@ -81,6 +81,7 @@ function displayNumberOfQuestions() {
 function showQuestion(question) {
     document.getElementById('question-box').innerText = question.question;
     document.getElementById('question-box').style.fontSize = '26px'
+
     question.answer.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
@@ -91,7 +92,8 @@ function showQuestion(question) {
         button.addEventListener('click', selectAnswer);
         document.getElementById('button-box').appendChild(button);
         });
-        document.getElementById('next-btn').classList.remove('jiggle')
+        
+    document.getElementById('next-btn').classList.remove('jiggle')
 }
 
 //function to show fact
@@ -155,7 +157,7 @@ function selectAnswer(e) {
     if (questions.length < currentQuestionIndex + 1) {
         document.getElementById('game-play').classList.add('hide');
         document.getElementById('game-results').classList.remove('hide');
-    }
+        }
 }
 
 // function to add class to buttons to identify correct answer for each question
