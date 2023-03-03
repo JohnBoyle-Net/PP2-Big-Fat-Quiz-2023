@@ -2,6 +2,8 @@
 
 [View the live project here](https://louibens.github.io/The-World-Quiz/)
 
+![image](https://user-images.githubusercontent.com/119696542/222735749-64d434b0-f381-426a-822b-5d52c27f2799.png)
+
 This website is for a trivia quiz focussed on facts from different countries around the world. The purpose of this website is to test the users geographical knowledge 
 in a fun way. This website is one page which updates based on the user interacting by entering their name, starting and playing along with the quiz that contains 10 questions. At the end the user will see their results and have the option to Replay or Go Home.
 
