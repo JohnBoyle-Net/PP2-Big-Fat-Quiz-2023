@@ -102,4 +102,4 @@ const questions = [
         fact: "Canada is the second largest country in the world with a coastline measures a whopping 243,042 km. "
     },
 
-]
+];

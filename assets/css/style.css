@@ -2,7 +2,7 @@ body {
     background-image: url("../images/sky.webp");
     background-size: cover;
     overflow: hidden;
-    font-family: Unbounded, 'san-serif';
+    font-family: 'Lilita One', 'san-serif';
     padding: 0;
     margin: 0;
     height: 100vh
@@ -15,8 +15,8 @@ body {
     text-transform: uppercase;
     color: white;
     text-align: center;
-    font-size: 400%;
-    font-family: Unbounded, 'san-serif';
+    font-size: 600%;
+    font-family: 'Lilita One', 'san-serif';
     text-shadow: 1px 1px 5px black, 0 0 30px black, 0 0 20px black;
 }
 
@@ -54,10 +54,12 @@ body {
 
 .rules h1 {
     margin-bottom: 0 !important;
+    font-size: 2.5rem;
 }
 
 .rules ol li {
-    margin: 15px
+    margin: 15px;
+    font-size: 1.3rem
 }
 
 .green {
@@ -88,9 +90,10 @@ input {
     width: 300px;
     height: 50px;
     box-shadow: 0 0 10px 5px;
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
     background-color: white;
+    font-family: 'Lilita One', 'san-serif';
 }
 
 .btn:hover {
@@ -122,7 +125,6 @@ button:disabled {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 2rem;
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px;
@@ -147,7 +149,8 @@ button:disabled {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-family: 'Lilita One', 'san-serif';
 }
 
 .answers:hover {
@@ -175,6 +178,7 @@ button:disabled {
     text-align: center;
     align-items: center;
     justify-content: space-between;
+    font-size: 1.4rem;
 }
 
 .score-box p {
@@ -270,7 +274,7 @@ button:disabled {
 @media only screen and (max-width: 1300px) {
 
     .heading {
-        font-size: 300%;
+        font-size: 500%;
     }
 
     .quiz-area {
@@ -288,7 +292,7 @@ button:disabled {
 @media only screen and (max-width: 950px) {
 
     .heading {
-        font-size: 250%;
+        font-size: 370%;
     }
         
     .quiz-area {
@@ -310,7 +314,7 @@ button:disabled {
     }
 
     .rules h1 {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         margin-bottom: 0 !important;
     }
 
@@ -320,7 +324,7 @@ button:disabled {
     }
 
     .rules ol li {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
         padding-left: 0;
     }
 }
@@ -334,7 +338,7 @@ button:disabled {
     }
 
     .heading {
-        font-size: 140%;
+        font-size: 200%;
         margin: 10px;
     }
 
@@ -356,12 +360,6 @@ button:disabled {
 
     #game-play {
         height: 500px;
-    }
-            
-    #question-box {   
-        width: 90%;
-        margin: auto; 
-        font-size: 1.3rem;       
     }
 
     .error {
@@ -407,15 +405,19 @@ button:disabled {
     }
 
     .rules ol li {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }      
 }
 
 /* For very small screens sizes from 320px wide and down */
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 340px) {
 
     .heading i {
         display: none
     }
+
+    .rules ol li {
+        font-size: 0.8rem;
+    }  
 }

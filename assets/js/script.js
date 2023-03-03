@@ -79,7 +79,7 @@ function displayNumberOfQuestions() {
 
 function showQuestion(question) {
     document.getElementById('question-box').innerText = question.question;
-    document.getElementById('question-box').style.fontSize = '26px';
+    document.getElementById('question-box').style.fontSize = '32px';
 
     question.answer.forEach(answer => {
         const button = document.createElement('button');
@@ -99,7 +99,7 @@ function showQuestion(question) {
 
 function showFact(question) {
     document.getElementById('question-box').innerText = question.fact;
-    document.getElementById('question-box').style.fontSize = '16px';
+    document.getElementById('question-box').style.fontSize = '20px';
 }
 
 //function to show current question number above score to show progress
