@@ -130,7 +130,7 @@ in a fun way. This website is one page which updates based on the user interacti
 
 ### Manual Test Cases and Results
 
-- The below tables detail the test cases that were used, the results and a cross-reference to the Feature ID that each test case exer
+- The below tables detail the test cases that were used, the results and a cross-reference to the Feature ID that each test case exercises.
 
 ![image](https://user-images.githubusercontent.com/119696542/222733078-640c11ab-1d33-4145-b19d-4b0deb222fd8.png)
 
