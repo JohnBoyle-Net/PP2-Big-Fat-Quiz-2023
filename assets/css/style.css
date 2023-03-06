@@ -263,7 +263,7 @@ button:disabled {
 .error a {
     text-decoration: none;
     color: black;
-    font-size: larger;
+    font-size: 2.3rem;
 }
 
 /* Media queries */
@@ -361,6 +361,10 @@ button:disabled {
     .error {
         width: 90%;
         margin: auto;  
+    }
+
+    .error a {
+        font-size: 1.5rem; 
     }
             
     .answers {
