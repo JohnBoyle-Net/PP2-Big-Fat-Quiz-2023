@@ -17,7 +17,7 @@ body {
     text-align: center;
     font-size: 600%;
     font-family: 'Lilita One', 'san-serif';
-    text-shadow: 1px 1px 5px black, 0 0 30px black, 0 0 20px black;
+    text-shadow: 1px 1px 30px black, 0 0 60px black, 0 0 60px black;
 }
 
 .heading a {
