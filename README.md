@@ -2,7 +2,7 @@
 
 [View the live project here](https://louibens.github.io/The-World-Quiz/)
 
-![image](https://user-images.githubusercontent.com/119696542/222735749-64d434b0-f381-426a-822b-5d52c27f2799.png)
+![image](https://user-images.githubusercontent.com/119696542/223071778-edfb4a5f-1885-420c-b094-7ac3c40e4f84.png)
 
 This website is for a trivia quiz focussed on facts from different countries around the world. The purpose of this website is to test the users geographical knowledge 
 in a fun way. This website is one page which updates based on the user interacting by entering their name, starting and playing along with the quiz that contains 10 questions. At the end the user will see their results and have the option to Replay or Go Home.
@@ -44,29 +44,34 @@ in a fun way. This website is one page which updates based on the user interacti
 - __F01 Title__
 
     - The title is capitalised with a shadow to make it stand out against the background.
+    - Icons from Font Awesome are used to emphasise the title.
+    - A user can click on the title to go back to the home screen at any point in the game.
+
+![image](https://user-images.githubusercontent.com/119696542/223072951-a0d19ca8-e231-4c35-9fea-c981c42557e8.png)
+
     
 - __F02 Home screen__
 
     - The user lands on the home screen which includes the title along with an area to display the rules/how to play, an input field where the user enters their name and a start button to begin the quiz.
     The design is simple with a sky background in line with the quiz relating to the world. All elements include the shadow to make the elements stick out on the page.
-    ![image](https://user-images.githubusercontent.com/119696542/222521631-97a4d752-079d-45ca-843b-52e2646bf6e0.png)
+    ![image](https://user-images.githubusercontent.com/119696542/223074217-4cbfe71d-bb91-404f-bf68-c1fd0c9d5fab.png)
 
     - The cursor is automatically loaded in the input field to enable user to enter their name with minimal touch. The user will be alerted to enter their name if they try to start without first entering their name in the input field.
-    ![image](https://user-images.githubusercontent.com/119696542/222521738-ea938d08-b4aa-47b5-947c-d67f18d82d8e.png)
+    ![image](https://user-images.githubusercontent.com/119696542/223074285-75d44841-7898-4255-85e7-82c5109f7cac.png)
 
     
 - __F03 Quiz screen__
     
     - When the user clicks on the start button on the home screen, the game screen will appear. The quiz screen has 4 elements - the question number and current score, the question, the 4 possible answers and a button to move to the next question. These elements have been styled in line with the home screen to maintain the overall design. 
-    ![image](https://user-images.githubusercontent.com/119696542/222513714-34f7e226-d17e-4397-aad0-eaf8d1faf474.png)
+    ![image](https://user-images.githubusercontent.com/119696542/223075111-e447b490-9ab9-4140-a48f-ea05e960c21c.png)
 
     - When the user clicks an answer the buttons will change color and a relevant fact will replace the question  - the correct answer will be green and the incorrect answers will be red. This helps the user to learn as they play the quiz as they can see what the correct answer is.
     The score will increase if the customer gets the answer correct.
-    ![image](https://user-images.githubusercontent.com/119696542/222514242-1078d393-a002-4081-88ce-e388ec485c36.png)
+    ![image](https://user-images.githubusercontent.com/119696542/223075645-f97bf5d4-7fee-4fdf-ad7c-2533fbb30470.png)
 
-    - The user is unable to select an answer again and must move to the next question. The NEXT button will start to jiggle after 4 seconds to indicate to the user to move on to the next question
-    
-    https://user-images.githubusercontent.com/119696542/222521937-7990f061-dfa2-471b-a216-c3219b538e0a.mp4
+    - The user is unable to select an answer again and must move to the next question. The NEXT button will start to jiggle after 4 seconds to indicate to the user to move on to the next question.
+
+    https://user-images.githubusercontent.com/119696542/223076427-f999c2c9-b67b-4e4b-ba1a-65acc034d062.mp4
 
     - When the user has answered the final question, the next button changes to "END" and the results screen is automatically displayed
     
@@ -74,23 +79,28 @@ in a fun way. This website is one page which updates based on the user interacti
     
     - The results screen includes an area to display the final score and a message to the user which includes the name they entered on the home screen. The message displayed will vary depending on the final score.
     There is also a play again button which will bring you back to question 1 or a home button which brings the user back to the home screen.
-    ![image](https://user-images.githubusercontent.com/119696542/222516595-5fd378de-603c-4760-8f4c-d3bc2f657c41.png)
+   
+    ![image](https://user-images.githubusercontent.com/119696542/223076790-dad231b1-d1ef-4b12-85d0-cd16e0d9b0cf.png)
+    
+- __F05 404 page__
+    
+    - The 404 page has been designed in line with the quiz design and will direct the user to the home screen either by clicking the title logo or the text in the box container.
+    
+    ![image](https://user-images.githubusercontent.com/119696542/223081796-c3e3434e-9773-4468-9b84-c4a6b3fe0030.png)
 
 
 ## Design
 
 -   ### Title/Logo
-    -   The title logo uses Lilita One font from Google Fonts. This was chosen to give a fun feel to the game.
+    -   The title logo uses Lilita One font from Google Fonts. This was chosen to give a fun feel to the game and is easy to read.
     -   World icons were used on either side of the title which were taken from Font Awesome
-    
-    ![image](https://user-images.githubusercontent.com/119696542/221643736-1f9bbe47-5621-4713-a9a4-168b70392e64.png)
 
 -   ### Imagery
     -   The background image selected is a blue sky to give a positive feel on landing on the site and it is the biggest part of the world - recognisable from anywhere :laughing:
 . This image was sourced from pexels.com
 
 -   ### Typography
-    -   Google Fonts were used to import Unbounded font into styles.css.  This was chosen to maintain a simple and modern feel that is easy to read throughout the site.
+    -   Google Fonts were used to import Lilita font into styles.css.  This was chosen to give a fun feel throughout.
 
 
 -   ### Wireframes
