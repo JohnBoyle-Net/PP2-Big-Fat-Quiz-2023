@@ -85,6 +85,7 @@ input {
     text-align: center;
     background-color: white;
     font-family: 'Lilita One', 'san-serif';
+    margin: 15px
 }
 
 .btn:hover {
@@ -120,7 +121,11 @@ button:disabled {
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px;
-    font-size: 32px;
+    font-size: 2.6rem;
+}
+
+.fact {
+    font-size: 2.1rem !important;
 }
 
 #button-box {
@@ -352,10 +357,6 @@ button:disabled {
         margin: 5px
     }
 
-    #game-play {
-        height: 500px;
-    }
-
     .error {
         width: 90%;
         margin: auto;  
@@ -371,7 +372,7 @@ button:disabled {
     }
 
     .score-box {
-        height: 30px;
+        height: 35px;
         width: 150px;
         font-size: 0.9rem;   
     }
