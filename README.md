@@ -88,6 +88,12 @@ in a fun way. This website is one page which updates based on the user interacti
     
     ![image](https://user-images.githubusercontent.com/119696542/223081796-c3e3434e-9773-4468-9b84-c4a6b3fe0030.png)
 
+- __Future Features__
+
+    - Categories can be added for future development to ensure return users are getting value and finding new things to keep them interested
+
+    ![image](https://user-images.githubusercontent.com/119696542/223089348-6d589583-090b-44a2-a23a-859bb803f5bb.png)
+
 
 ## Design
 
