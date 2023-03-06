@@ -305,11 +305,12 @@ button:disabled {
     }
         
     .answers {
-        height: 80px;
+        height: 60px;
         width: 250px;
         margin: 10px;
         border: solid 2px black;
         border-radius: 10px;
+        font-size: 2rem;
     }
 
     .rules h1 {
