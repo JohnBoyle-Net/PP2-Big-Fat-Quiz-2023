@@ -130,7 +130,7 @@ in a fun way. This website is one page which updates based on the user interacti
 
 ### Frameworks, Libraries & Programs Used
 
--   [Google Fonts:](https://fonts.google.com/) was used to import the 'Unbounded' and 'Lilita' fonts into the style.css file. However only Unbounded is used across the project.
+-   [Google Fonts:](https://fonts.google.com/) was used to import the 'Unbounded' and 'Lilita' fonts into the style.css file. However only Lilita is used across the project.
 -   [Font Awesome:](https://fontawesome.com/) was used to add icons for the title and social media websites.
 -   [Git:](https://git-scm.com/) was used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
 -   [GitHub:](https://github.com/) is used as the respository for the projects code after being pushed from Git.
