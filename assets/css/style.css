@@ -1,10 +1,11 @@
 body {
-    background-image: url("../images/sky.webp");
+    background: url("../images/sky.webp");
     background-size: cover;
+    background-position: center;
     font-family: 'Lilita One', 'san-serif';
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: 100%;
 }
 
 /* title logo */
