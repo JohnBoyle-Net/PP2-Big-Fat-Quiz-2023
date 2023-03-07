@@ -1,6 +1,6 @@
 # The World Quiz
 
-[View the live project here](https://louibens.github.io/The-World-Quiz/)
+[View the live project here](https://louibens.github.io/PP2-The-World-Quiz/)
 
 ![image](https://user-images.githubusercontent.com/119696542/223071778-edfb4a5f-1885-420c-b094-7ac3c40e4f84.png)
 
