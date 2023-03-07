@@ -113,7 +113,7 @@ function setNextQuestion() {
     resetState();
     showQuestion(questions[currentQuestionIndex]);
     document.getElementById('next-btn').classList.remove('jiggle');
-    document.getElementById('question-box').classList.remove('fact')
+    document.getElementById('question-box').classList.remove('fact');
 }
 
 // function to remove previous answers when user moves to new question
