@@ -27,7 +27,6 @@ in a fun way. This website is one page which updates based on the user interacti
         3. As a First Time Visitor, I want to be able to easily interact with the site to login and play the quiz.
         4. As a First Time Visitor, I want to be able to easily see how many questions there are and what my score is throughout the quiz.
         5. As a First Time Visitor, I want to be able to easily see my quiz results and either play again or go to the home screen.
-        6. As a First Time Visitor, I want to be able to easily navigate to social media pages.
         
     -   #### Returning Visitor Goals
 
@@ -88,11 +87,11 @@ in a fun way. This website is one page which updates based on the user interacti
     
     ![image](https://user-images.githubusercontent.com/119696542/223081796-c3e3434e-9773-4468-9b84-c4a6b3fe0030.png)
 
-- __Future Features__
+#### Future Features
 
-    - Categories can be added for future development to ensure return users are getting value and finding new things to keep them interested
+- Categories can be added for future development to ensure return users are getting value and finding new things to keep them interested
 
-    ![image](https://user-images.githubusercontent.com/119696542/223089348-6d589583-090b-44a2-a23a-859bb803f5bb.png)
+![image](https://user-images.githubusercontent.com/119696542/223089348-6d589583-090b-44a2-a23a-859bb803f5bb.png)
 
 
 ## Design
@@ -148,9 +147,9 @@ in a fun way. This website is one page which updates based on the user interacti
 
 - The below tables detail the test cases that were used, the results and a cross-reference to the Feature ID that each test case exercises.
 
-![image](https://user-images.githubusercontent.com/119696542/222733078-640c11ab-1d33-4145-b19d-4b0deb222fd8.png)
+![image](https://user-images.githubusercontent.com/119696542/223388076-bf16ad4b-5aff-4f8b-a320-239f497fa4d8.png)
 
-![image](https://user-images.githubusercontent.com/119696542/222733235-46ba4980-4c8d-40d2-af0f-e6a2033d6bda.png)
+![image](https://user-images.githubusercontent.com/119696542/223388552-b8e6cd5b-67eb-4600-9e47-ac873874f9f4.png)
 
 - Testing has been carried out on the following browsers :
 
@@ -221,6 +220,16 @@ in a fun way. This website is one page which updates based on the user interacti
 - On the command line, type "git clone" then paste in the copied url and press the Enter key to begin the clone process
 
 ## Credits
+
+### Content
+
+- All content was written by the creator based off information researched from The World Book by Joe Fullman and Rose Blake and Google.
+
+### Code research
+
+- Some elements of the javascript code were researched on a youtube tutorial by Web Dev Simplified [Link](https://www.youtube.com/watch?v=riDzcEQbX6k&t=1124s)
+
+### Acknowledgements
 
 - Thank you to my family that have made the time for me to get my head around javascript (to some extent). And for continually testing and providing feedback so I could push myself and improve my knowledge along with the site.
 - A massive thanks also goes to my mentor, Elaine Roche, who continues to support me and help me to grow with her excellent feedback and expertise which has been much appreciated throughout the development of this project.
