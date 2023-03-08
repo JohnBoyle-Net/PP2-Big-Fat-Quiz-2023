@@ -1,30 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-// event listener to start the quiz by loading quiz area (question and answers) and the score display
-// this checks if user has entered a name before letting them proceed
+    // event listener to start the quiz by loading quiz area (question and answers) and the score display
+    // this checks if user has entered a name before letting them proceed
 
-document.getElementById('start-btn').addEventListener('click', verifyUser);
+    document.getElementById('start-btn').addEventListener('click', verifyUser);
 
-// event listener for bring user to start of quiz screen once they have completed the quiz
+    // event listener for bring user to start of quiz screen once they have completed the quiz
 
-document.getElementById('play-btn').addEventListener('click', playAgain);
+    document.getElementById('play-btn').addEventListener('click', playAgain);
 
-// event listener for bring user to home screen once they complete the quiz
+    // event listener for bring user to home screen once they complete the quiz
 
-document.getElementById('home').addEventListener('click', goHome);
+    document.getElementById('home').addEventListener('click', goHome);
 
-// event listener for Next button to load next question, unless there are no questions left user will go to results screen
+    // event listener for Next button to load next question, unless there are no questions left user will go to results screen
 
-document.getElementById('next-btn').addEventListener('click', moveToNextQuestion);
+    document.getElementById('next-btn').addEventListener('click', moveToNextQuestion);
 
-function verifyUser(){
+    function verifyUser(){
     if(document.getElementById('name').value === ''){
     alert('Please enter a name');
     } else {
     startGame();
     captureUserName();
     }
-}
+    }
 
 });
 

@@ -2,6 +2,7 @@ body {
     background: url("../images/sky.webp");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     font-family: 'Lilita One', 'san-serif';
     padding: 0;
     margin: 0;
