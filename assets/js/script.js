@@ -28,25 +28,6 @@ function verifyUser(){
 
 });
 
-let currentQuestionIndex = '';
-
-// function to move to next question
-
-function moveToNextQuestion() {
-    if (questions.length > currentQuestionIndex +1) {
-        currentQuestionIndex++;
-        showCurrentQuestionNumber();
-        setNextQuestion(); 
-    } else {
-        document.getElementById('next-btn').innerText = 'END';
-        setTimeout (() => {
-        document.getElementById('game-play').classList.add('hide');
-        document.getElementById('game-results').classList.remove('hide');
-        displayFinalScore();
-        }, 1000);
-    }
-}
-
 // function to capture name entered on home screen and display it on results screen
 
 function captureUserName() {
@@ -66,6 +47,25 @@ function startGame() {
     finalScore = 0;
     setNextQuestion();
     document.getElementById('next-btn').innerText = 'NEXT';
+}
+
+let currentQuestionIndex = '';
+
+// function to move to next question
+
+function moveToNextQuestion() {
+    if (questions.length > currentQuestionIndex +1) {
+        currentQuestionIndex++;
+        showCurrentQuestionNumber();
+        setNextQuestion(); 
+    } else {
+        document.getElementById('next-btn').innerText = 'END';
+        setTimeout (() => {
+        document.getElementById('game-play').classList.add('hide');
+        document.getElementById('game-results').classList.remove('hide');
+        displayFinalScore();
+        }, 1000);
+    }
 }
 
 // function to calculate and display total number of questions. Total will increase if more questions are added.
@@ -92,6 +92,7 @@ function showQuestion(question) {
         });
 
     document.getElementById('next-btn').classList.remove('jiggle');
+    
 }
 
 //function to show fact
@@ -153,10 +154,6 @@ function selectAnswer(e) {
         document.getElementById('final-score').innerText = ++finalScore;
         document.getElementById('final-number-of-qs').innerText = questions.length;
         }
-    if (questions.length < currentQuestionIndex + 1) {
-        document.getElementById('game-play').classList.add('hide');
-        document.getElementById('game-results').classList.remove('hide');
-        }
 }
 
 // function to add class to buttons to identify correct answer for each question
@@ -167,7 +164,7 @@ function setStatusClass(element, correct) {
         element.classList.add('correct'); 
     } else {
         element.classList.add('incorrect');
-    }  
+    } 
 }
 
 // function to remove class added to identify correct answer for each question
