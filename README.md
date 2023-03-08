@@ -190,7 +190,8 @@ in a fun way. This website is one page which updates based on the user interacti
 
 - [PageSpeed Insights](https://pagespeed.web.dev/)
 
-![image](https://user-images.githubusercontent.com/119696542/222753491-8d7a6c44-7694-459d-8ede-48b5e290ab81.png)
+![image](https://user-images.githubusercontent.com/119696542/223680687-3cb955cc-c721-463c-9bba-0cf01dd11154.png)
+![image](https://user-images.githubusercontent.com/119696542/223680865-cfb8ec7e-e663-442a-bd56-fe38757b4d93.png)
 
 
 ## Deployment
