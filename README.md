@@ -156,11 +156,22 @@ in a fun way. This website is one page which updates based on the user interacti
     - Chrome Version 110.0.5481.178 (Official Build) (64-bit)
     - Firefox Version Version 110.0.1 (64-bit)
     - Edge Version 110.0.1587.57 (Official build) (64-bit)
-    
+
+
 - Testing on Chrome browser shows an alert when user clicks on the title logo - Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'. 
 ![image](https://user-images.githubusercontent.com/119696542/223702426-28757631-dfc9-4683-9edb-3a7b6b0475c7.png)
 This does not affect the usability of the site.
 Following research of this error it appears it is due to github blocking data being gathered for FLoC. Further information can be found [here](https://www.positioniseverything.net/error-with-permissions-policy-header-unrecognized-feature-interest-cohort)
+
+### Responsivity
+
+- iPad – 768px x 1024px
+
+![image](https://user-images.githubusercontent.com/119696542/224321830-97f8ceb5-0ecd-4f8b-b8f1-f9381de4e248.png)
+
+- iPhone SE – 375px x 667px
+    
+![image](https://user-images.githubusercontent.com/119696542/224322032-f8add55e-6603-4a22-8ba1-effe915217ed.png)
 
  ### Automated Validator Testing
 
