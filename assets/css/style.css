@@ -3,7 +3,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-family: 'Lilita One', 'san-serif';
+    font-family: 'Abril Fatface', 'san-serif';
     padding: 0;
     margin: 0;
     height: 100vh;
@@ -17,7 +17,7 @@ body {
     color: white;
     text-align: center;
     font-size: 600%;
-    font-family: 'Lilita One', 'san-serif';
+    font-family: 'Abril Fatface', 'san-serif';
     text-shadow: 1px 1px 5px black, 0 0 50px black, 0 0 60px black, 0 0 60px black;
 }
 
@@ -85,7 +85,7 @@ input {
     font-size: 2em;
     text-align: center;
     background-color: white;
-    font-family: 'Lilita One', 'san-serif';
+    font-family: 'Abril Fatface', 'san-serif';
 }
 
 .btn:hover {
@@ -148,7 +148,7 @@ button:disabled {
     align-items: center;
     justify-content: center;
     font-size: 2.3rem;
-    font-family: 'Lilita One', 'san-serif';
+    font-family: 'Abril Fatface', 'san-serif';
 }
 
 .answers:hover {
