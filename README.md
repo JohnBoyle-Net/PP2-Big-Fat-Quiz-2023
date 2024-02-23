@@ -1,11 +1,10 @@
-# The World Quiz
+# The Big Fat Quiz of 2023
 
-[View the live project here](https://louibens.github.io/PP2-The-World-Quiz/)
+[View the live project here](https://...)
 
-![image](https://user-images.githubusercontent.com/119696542/223071778-edfb4a5f-1885-420c-b094-7ac3c40e4f84.png)
+![image](https://user-images...)
 
-This website is for a trivia quiz focussed on facts from different countries around the world. The purpose of this website is to test the users geographical knowledge 
-in a fun way. This website is one page which updates based on the user interacting by entering their name, starting and playing along with the quiz that contains 10 questions. At the end the user will see their results and have the option to Replay or Go Home.
+Welcome to the online trivia quiz dedicated to promoting the 2023 edition of Channel 4 Television's "The Big Fat Quiz of The Year." Test your general knowledge of global events from 2023 on this interactive platform. Simply enter your name to begin the quiz, featuring 10 questions that dynamically update as you play. Upon completion, view your results and choose between replaying or returning home. Let's get started!
 
 
 ## Index – Table of Contents
@@ -22,11 +21,12 @@ in a fun way. This website is one page which updates based on the user interacti
 -   ### User stories
 
     -   #### First Time Visitor Goals
-        1. As a First Time Visitor, I want to easily understand the main purpose of the site.
-        2. As a First Time Visitor, I want to be able to easily view the instructions on how to play.
-        3. As a First Time Visitor, I want to be able to easily interact with the site to login and play the quiz.
-        4. As a First Time Visitor, I want to be able to easily see how many questions there are and what my score is throughout the quiz.
-        5. As a First Time Visitor, I want to be able to easily see my quiz results and either play again or go to the home screen.
+        1. As a First Time Visitor, I want the main purpose of the site to be easily understandable.
+        2. As a First Time Visitor, I want to easily access instructions on how to play.
+        3. As a First Time Visitor, I want to easily interact with the site to log in and play the quiz.
+        4. As a First Time Visitor, I want to easily track the number of questions throughout the quiz.
+        5. As a First Time Visitor, I want to easily view my score ongoing and my final quiz results.
+        6. As a First Time Visitor, I want to have the option to play again or return to the home screen.
         
     -   #### Returning Visitor Goals
 
